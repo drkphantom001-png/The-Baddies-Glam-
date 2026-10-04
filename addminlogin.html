@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { 'colors': { 'primary-fixed-dim': '#ffb0cd', 'primary-fixed': '#ffd9e4', 'inverse-surface': '#4a2437', 'inverse-primary': '#ffb0cd', 'on-secondary-fixed': '#3e0022', 'error-container': '#ffdad6', 'secondary-fixed': '#ffd9e5', 'on-secondary-container': '#770148', 'surface-container-low': '#fff0f4', 'tertiary-fixed-dim': '#f9bc50', 'surface-dim': '#ffcce1', 'surface-bright': '#fff8f8', 'on-background': '#310f22', 'on-primary-fixed': '#3e0021', 'on-primary': '#ffffff', 'on-error': '#ffffff', 'primary-container': '#cd3982', 'primary': '#ad1b69', 'secondary': '#a6306c', 'on-primary-fixed-variant': '#8d0052', 'on-secondary-fixed-variant': '#871353', 'on-surface-variant': '#574148', 'on-tertiary': '#ffffff', 'surface-container-high': '#ffe0eb', 'surface-tint': '#b01f6b', 'surface-container-highest': '#ffd8e7', 'surface-variant': '#ffd8e7', 'tertiary': '#7b5500', 'tertiary-fixed': '#ffdeac', 'on-tertiary-container': '#fffbff', 'tertiary-container': '#9b6c00', 'on-primary-container': '#fffbff', 'background': '#fff8f8', 'on-tertiary-fixed-variant': '#5f4100', 'on-secondary': '#ffffff', 'surface': '#fff8f8', 'secondary-fixed-dim': '#ffb0ce', 'on-error-container': '#93000a', 'surface-container-lowest': '#ffffff', 'on-surface': '#310f22', 'outline-variant': '#ddbfc8', 'on-tertiary-fixed': '#281900', 'inverse-on-surface': '#ffecf2', 'error': '#ba1a1a', 'secondary-container': '#ff78b5', 'outline': '#8a7078', 'surface-container': '#ffe8ef' }, 'borderRadius': { 'DEFAULT': '1rem', 'lg': '2rem', 'xl': '3rem', 'full': '9999px' }, 'spacing': { 'space-md': '1rem', 'margin': '1.25rem', 'space-2xl': '3rem', 'gutter': '1rem', 'space-lg': '1.5rem', 'margin-tablet': '2rem', 'space-xl': '2.25rem', 'space-xs': '0.25rem', 'space-sm': '0.5rem', 'gutter-tablet': '1.5rem' }, 'fontFamily': { 'headline-sm': ['EB Garamond'], 'label-sm': ['Outfit'], 'headline-md': ['EB Garamond'], 'label-md': ['Outfit'], 'body-sm': ['Outfit'], 'headline-lg-mobile': ['EB Garamond'], 'body-lg': ['Outfit'], 'display-lg-mobile': ['EB Garamond'], 'display-lg': ['EB Garamond'], 'body-md': ['Outfit'], 'label-lg': ['Outfit'], 'headline-lg': ['EB Garamond'] }, 'fontSize': { 'headline-sm': ['1.25rem', { 'lineHeight': '1.5rem', 'fontWeight': '600' }], 'label-sm': ['0.6875rem', { 'lineHeight': '0.75rem', 'letterSpacing': '0.05em', 'fontWeight': '600' }], 'headline-md': ['1.5rem', { 'lineHeight': '1.75rem', 'fontWeight': '500' }], 'label-md': ['0.75rem', { 'lineHeight': '0.875rem', 'letterSpacing': '0.06em', 'fontWeight': '500' }], 'body-sm': ['0.8125rem', { 'lineHeight': '1.25rem', 'fontWeight': '400' }], 'headline-lg-mobile': ['1.875rem', { 'lineHeight': '2.125rem', 'fontWeight': '400' }], 'body-lg': ['1.0625rem', { 'lineHeight': '1.625rem', 'fontWeight': '300' }], 'display-lg-mobile': ['2.5rem', { 'lineHeight': '2.75rem', 'letterSpacing': '-0.01em', 'fontWeight': '400' }], 'display-lg': ['3.25rem', { 'lineHeight': '3.5rem', 'letterSpacing': '-0.02em', 'fontWeight': '400' }], 'body-md': ['0.9375rem', { 'lineHeight': '1.5rem', 'fontWeight': '300' }], 'label-lg': ['0.875rem', { 'lineHeight': '1rem', 'letterSpacing': '0.08em', 'fontWeight': '500' }], 'headline-lg': ['2.25rem', { 'lineHeight': '2.5rem', 'fontWeight': '400' }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <!-- Firebase -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
+  import { getAnalytics, isSupported } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-analytics.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCThamH38Ivr4Lvp8oM1KMnBK3hckt6uCg",
+    authDomain: "the-baddies-glam.firebaseapp.com",
+    databaseURL: "https://the-baddies-glam-default-rtdb.firebaseio.com",
+    projectId: "the-baddies-glam",
+    storageBucket: "the-baddies-glam.firebasestorage.app",
+    messagingSenderId: "50349208028",
+    appId: "1:50349208028:web:8eae36e1f142912ebc5f19",
+    measurementId: "G-EJFRE46N73"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  window.firebaseApp = app;
+
+  // Analytics only works on http(s) pages in supported browsers
+  isSupported().then((ok) => { if (ok) window.firebaseAnalytics = getAnalytics(app); }).catch(() => {});
+</script>
+</head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(74,36,55,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Return to client portal" class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container-high/60 transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><div class="flex items-center gap-space-xs"><img alt="Brand logo. - Primary color: #d13c85
+- Font: ebGaramond
+- Mode: light
+- Roundness: rounded-full
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V4bizUExCofWj8R8Oz0xr9o_Xo2UihNpMz-SrJq7o_-bXJ8pH6Bbc0JUU2YOFp6PXw96j1d7qmnfXY2Yfk7_d-z5HUuzKn38Q_K15MXhHAwVPk_vQKJlfuGzFGKxLJjY7yxktf7FcbPifV--4iwaal2mgYyEgp9yHoR0Nxjb0k1LDRIX8KdP9tptkzMHrFaWYiw5HuQv6FxUOACBKMORCYr-w2GAjCKre1W9GAt1e0s8cvXRVRIFK-wp0"/><span class="font-headline-sm text-headline-sm text-primary tracking-tight hidden sm:inline">Baddies Glam</span></div></div><div class="flex-1 text-center px-space-xs"><h1 class="font-headline-sm text-headline-sm text-on-surface truncate">Admin Login</h1></div><div class="flex items-center justify-end w-11"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface pb-safe min-h-screen"><div class="flex flex-col w-full max-w-[480px] mx-auto px-margin pb-space-2xl">
+<!-- Subtle Top VIP Tag -->
+<div class="flex items-center justify-center mt-space-md mb-space-lg">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high/80 backdrop-blur-sm shadow-[0_2px_8px_rgba(74,36,55,0.04)]">
+<span class="text-tertiary-fixed-dim text-xs leading-none">✦</span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-on-surface-variant font-medium">PRIVATE STUDIO ACCESS • DIRECTORS &amp; LEAD STYLISTS</span>
+</div>
+</div>
+<!-- Brand Emblem with Luminous Aura -->
+<div class="flex flex-col items-center text-center mb-space-xl">
+<div class="relative mb-space-md">
+<!-- Glow Underlay -->
+<div class="absolute inset-0 rounded-3xl bg-secondary-container/40 blur-xl scale-125 transform"></div>
+<!-- Emblem Container -->
+<div class="relative w-20 h-20 rounded-3xl bg-gradient-to-tr from-primary via-primary-container to-secondary-container p-0.5 shadow-[0_12px_28px_-6px_rgba(209,60,133,0.38)] flex items-center justify-center">
+<div class="w-full h-full rounded-[22px] bg-gradient-to-b from-primary via-[#b92b74] to-primary flex flex-col items-center justify-center relative overflow-hidden">
+<div class="absolute -top-3 -right-3 w-10 h-10 bg-white/20 rounded-full blur-sm"></div>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-white tracking-normal font-semibold select-none flex items-center">
+            BG
+            <span class="text-tertiary-fixed-dim text-sm -mt-3.5 -ml-0.5">✦</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Editorial Headings -->
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight mb-space-xs font-semibold">
+      Welcome back, Glam Boss
+    </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-[320px] leading-relaxed">
+      Sign in to manage Lekki studio appointments, client messages, revenue, and glam catalog.
+    </p>
+</div>
+<!-- Main Authentication Card -->
+<div class="w-full rounded-2xl bg-surface-container-lowest/90 backdrop-blur-md p-space-lg shadow-[0_8px_32px_rgba(74,36,55,0.06)] flex flex-col gap-space-lg">
+<!-- Mode Switcher Tabs -->
+<div class="grid grid-cols-2 p-1 rounded-full bg-surface-container-high/60" role="tablist">
+<button aria-selected="true" class="py-2.5 px-3 rounded-full font-label-md text-label-md tracking-wider transition-all duration-300 flex items-center justify-center gap-1.5 bg-surface-container-lowest text-primary shadow-sm font-semibold" id="tab-pin" onclick="switchAuthMode('pin')" role="tab">
+<span class="material-symbols-outlined text-[17px]">fingerprint</span>
+        PIN &amp; Face ID
+      </button>
+<button aria-selected="false" class="py-2.5 px-3 rounded-full font-label-md text-label-md tracking-wider transition-all duration-300 flex items-center justify-center gap-1.5 text-on-surface-variant hover:text-on-surface" id="tab-master" onclick="switchAuthMode('master')" role="tab">
+<span class="material-symbols-outlined text-[17px]">key</span>
+        Master Key
+      </button>
+</div>
+<!-- Director Credential Profile Chip -->
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low/70">
+<div class="flex items-center gap-3 min-w-0">
+<div class="relative flex-shrink-0">
+<div class="w-10 h-10 rounded-full bg-gradient-to-br from-primary-fixed to-secondary-fixed flex items-center justify-center overflow-hidden">
+<span class="font-headline-sm text-headline-sm text-primary">BA</span>
+</div>
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-emerald-500 shadow-[0_0_0_2px_#ffffff]"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Bukky Adesina</span>
+<span class="text-tertiary-fixed-dim text-xs">✦</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Lead Director • Lekki HQ</span>
+</div>
+</div>
+<button class="flex-shrink-0 px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm hover:bg-surface-container-highest transition-colors" type="button">
+        Switch
+      </button>
+</div>
+<!-- PIN & Biometrics Panel -->
+<div class="flex flex-col gap-space-lg" id="panel-pin">
+<!-- 4-Digit PIN Visual -->
+<div class="flex flex-col items-center gap-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">
+          Studio Quick-PIN
+        </label>
+<div class="flex items-center gap-3.5 my-1">
+<div class="w-3.5 h-3.5 rounded-full bg-primary shadow-[0_0_10px_rgba(209,60,133,0.5)] transform scale-110 transition-transform"></div>
+<div class="w-3.5 h-3.5 rounded-full bg-primary shadow-[0_0_10px_rgba(209,60,133,0.5)] transform scale-110 transition-transform"></div>
+<div class="w-3.5 h-3.5 rounded-full bg-primary shadow-[0_0_10px_rgba(209,60,133,0.5)] transform scale-110 transition-transform"></div>
+<div class="w-3.5 h-3.5 rounded-full bg-surface-container-highest animate-pulse"></div>
+</div>
+<span class="font-body-sm text-body-sm text-outline text-[12px]">Last digit required to finalize access</span>
+</div>
+<!-- Biometric Quick-Unlock Card -->
+<div class="rounded-xl bg-gradient-to-br from-surface-container-low via-surface-container to-surface-container-high/50 p-space-md flex flex-col items-center text-center shadow-sm">
+<div class="relative w-14 h-14 rounded-2xl bg-surface-container-lowest flex items-center justify-center mb-space-sm shadow-[0_4px_16px_rgba(74,36,55,0.06)]">
+<span class="material-symbols-outlined text-[32px] text-primary" style="font-variation-settings: 'FILL' 1;">
+            face
+          </span>
+<span class="absolute -top-1 -right-1 text-tertiary-fixed-dim text-xs">✦</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-0.5">
+          Instant Face ID
+        </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-[240px] mb-space-md leading-snug">
+          Authorized on Lead Director's iPhone 15 Pro (Lekki Studio Vault)
+        </p>
+<button class="w-full py-2.5 px-4 rounded-full bg-surface-container-lowest hover:bg-surface-bright text-primary font-label-md text-label-md flex items-center justify-center gap-2 shadow-[0_2px_12px_rgba(209,60,133,0.12)] active:scale-95 transition-all" id="bio-scan-btn" onclick="triggerBiometricScan()" type="button">
+<span class="material-symbols-outlined text-[18px]">contactless</span>
+<span id="bio-scan-text">Authenticate with Face ID</span>
+<span class="text-tertiary-fixed-dim text-xs leading-none">✦</span>
+</button>
+</div>
+</div>
+<!-- Master Key Panel (Hidden by default) -->
+<div class="hidden flex-col gap-space-md" id="panel-master">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">
+          Studio Master Email / ID
+        </label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-on-surface-variant text-[20px]">badge</span>
+<input class="w-full pl-11 pr-4 py-3 rounded-full bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none cursor-default select-none" readonly="" type="text" value="bukky.adesina@baddiesglam.ng"/>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">
+            Master Security Key
+          </label>
+<a class="font-label-sm text-label-sm text-primary hover:text-primary-container font-medium transition-colors" href="#">
+            Forgot Key?
+          </a>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-on-surface-variant text-[20px]">lock</span>
+<input class="w-full pl-11 pr-11 py-3 rounded-full bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none" id="password-input" type="password" value="GlamBossStudio2024!"/>
+<button class="absolute right-3.5 w-7 h-7 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface" onclick="togglePasswordVisibility()" type="button">
+<span class="material-symbols-outlined text-[19px]" id="pwd-eye-icon">visibility</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Primary Unlock Button -->
+<button class="w-full py-4 px-6 rounded-full bg-gradient-to-r from-[#ee6aa7] via-primary to-[#b92b74] text-on-primary font-label-lg text-label-lg tracking-wider flex items-center justify-center gap-2.5 shadow-[0_8px_24px_-4px_rgba(209,60,133,0.36)] active:scale-[0.98] transition-all hover:brightness-105" type="button">
+<span class="font-medium">Unlock Studio Dashboard</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<!-- Security & Privacy Reassurance Notice -->
+<div class="flex items-center justify-center gap-2 text-center pt-1">
+<span class="material-symbols-outlined text-[16px] text-outline" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="font-body-sm text-body-sm text-outline text-[12px]">
+        256-bit Encrypted • 2FA Active • Paystack Protected
+      </span>
+</div>
+</div>
+<!-- Studio Status & Client App Link Footer -->
+<div class="flex flex-col items-center text-center mt-space-xl gap-space-sm">
+<a class="inline-flex items-center gap-1.5 text-primary hover:text-primary-container font-label-md text-label-md tracking-wider transition-colors py-1 px-3 rounded-full bg-surface-container-high/40" href="#">
+<span class="material-symbols-outlined text-[16px]">arrow_back</span>
+<span>Return to Public Booking App</span>
+</a>
+<div class="flex items-center gap-2 text-outline font-label-sm text-label-sm pt-2">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+<span>Baddies Glam Studio Admin v2.4.0 • Lekki Phase 1 HQ</span>
+</div>
+</div>
+</div>
+<script>
+  function switchAuthMode(mode) {
+    const pinTab = document.getElementById('tab-pin');
+    const masterTab = document.getElementById('tab-master');
+    const pinPanel = document.getElementById('panel-pin');
+    const masterPanel = document.getElementById('panel-master');
+
+    if (mode === 'pin') {
+      pinTab.className = "py-2.5 px-3 rounded-full font-label-md text-label-md tracking-wider transition-all duration-300 flex items-center justify-center gap-1.5 bg-surface-container-lowest text-primary shadow-sm font-semibold";
+      pinTab.setAttribute('aria-selected', 'true');
+      masterTab.className = "py-2.5 px-3 rounded-full font-label-md text-label-md tracking-wider transition-all duration-300 flex items-center justify-center gap-1.5 text-on-surface-variant hover:text-on-surface";
+      masterTab.setAttribute('aria-selected', 'false');
+      
+      pinPanel.classList.remove('hidden');
+      pinPanel.classList.add('flex');
+      masterPanel.classList.remove('flex');
+      masterPanel.classList.add('hidden');
+    } else {
+      masterTab.className = "py-2.5 px-3 rounded-full font-label-md text-label-md tracking-wider transition-all duration-300 flex items-center justify-center gap-1.5 bg-surface-container-lowest text-primary shadow-sm font-semibold";
+      masterTab.setAttribute('aria-selected', 'true');
+      pinTab.className = "py-2.5 px-3 rounded-full font-label-md text-label-md tracking-wider transition-all duration-300 flex items-center justify-center gap-1.5 text-on-surface-variant hover:text-on-surface";
+      pinTab.setAttribute('aria-selected', 'false');
+
+      masterPanel.classList.remove('hidden');
+      masterPanel.classList.add('flex');
+      pinPanel.classList.remove('flex');
+      pinPanel.classList.add('hidden');
+    }
+  }
+
+  function togglePasswordVisibility() {
+    const pwd = document.getElementById('password-input');
+    const icon = document.getElementById('pwd-eye-icon');
+    if (pwd.type === 'password') {
+      pwd.type = 'text';
+      icon.textContent = 'visibility_off';
+    } else {
+      pwd.type = 'password';
+      icon.textContent = 'visibility';
+    }
+  }
+
+  function triggerBiometricScan() {
+    const btn = document.getElementById('bio-scan-btn');
+    const text = document.getElementById('bio-scan-text');
+    btn.classList.add('scale-95', 'opacity-80');
+    text.textContent = 'Scanning Face ID...';
+    setTimeout(() => {
+      text.textContent = 'Verified • Bukky Adesina';
+      btn.classList.remove('scale-95', 'opacity-80');
+      btn.classList.add('bg-emerald-50', 'text-emerald-700');
+    }, 1100);
+  }
+</script></main></body></html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_blank" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&amp;family=Outfit:wght@100..900&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-variant": "#ffd8e7", "surface-dim": "#ffcce1", "outline": "#8a7078", "on-surface": "#310f22", "on-secondary-fixed": "#3e0022", "surface-container": "#ffe8ef", "tertiary-fixed": "#ffdeac", "surface-container-highest": "#ffd8e7", "on-primary-container": "#fffbff", "secondary": "#a6306c", "surface-container-low": "#fff0f4", "tertiary-container": "#9b6c00", "on-primary-fixed-variant": "#8d0052", "secondary-fixed-dim": "#ffb0ce", "tertiary-fixed-dim": "#f9bc50", "primary-container": "#cd3982", "on-primary": "#ffffff", "background": "#fff8f8", "on-primary-fixed": "#3e0021", "on-error-container": "#93000a", "on-error": "#ffffff", "on-tertiary-fixed-variant": "#5f4100", "inverse-surface": "#4a2437", "tertiary": "#7b5500", "on-secondary": "#ffffff", "secondary-container": "#ff78b5", "surface-container-high": "#ffe0eb", "error": "#ba1a1a", "outline-variant": "#ddbfc8", "surface": "#fff8f8", "inverse-primary": "#ffb0cd", "error-container": "#ffdad6", "on-tertiary-fixed": "#281900", "surface-tint": "#b01f6b", "primary": "#ad1b69", "on-tertiary-container": "#fffbff", "primary-fixed-dim": "#ffb0cd", "on-tertiary": "#ffffff", "inverse-on-surface": "#ffecf2", "on-secondary-fixed-variant": "#871353", "on-secondary-container": "#770148", "on-background": "#310f22", "on-surface-variant": "#574148", "surface-bright": "#fff8f8", "secondary-fixed": "#ffd9e5", "surface-container-lowest": "#ffffff", "primary-fixed": "#ffd9e4" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "space-xs": "0.25rem", "space-xl": "2.25rem", "space-sm": "0.5rem", "space-2xl": "3rem", "margin": "1.25rem", "space-lg": "1.5rem", "space-md": "1rem", "gutter-tablet": "1.5rem", "margin-tablet": "2rem", "gutter": "1rem" }, fontFamily: { "headline-sm": ["EB Garamond"], "label-lg": ["Outfit"], "display-lg-mobile": ["EB Garamond"], "display-lg": ["EB Garamond"], "body-md": ["Outfit"], "body-sm": ["Outfit"], "headline-lg": ["EB Garamond"], "label-md": ["Outfit"], "body-lg": ["Outfit"], "label-sm": ["Outfit"], "headline-md": ["EB Garamond"], "headline-lg-mobile": ["EB Garamond"] }, fontSize: { "headline-sm": ["1.25rem", { "lineHeight": "1.5rem", "fontWeight": "600" }], "label-lg": ["0.875rem", { "lineHeight": "1rem", "letterSpacing": "0.08em", "fontWeight": "500" }], "display-lg-mobile": ["2.5rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.01em", "fontWeight": "400" }], "display-lg": ["3.25rem", { "lineHeight": "3.5rem", "letterSpacing": "-0.02em", "fontWeight": "400" }], "body-md": ["0.9375rem", { "lineHeight": "1.5rem", "fontWeight": "300" }], "body-sm": ["0.8125rem", { "lineHeight": "1.25rem", "fontWeight": "400" }], "headline-lg": ["2.25rem", { "lineHeight": "2.5rem", "fontWeight": "400" }], "label-md": ["0.75rem", { "lineHeight": "0.875rem", "letterSpacing": "0.06em", "fontWeight": "500" }], "body-lg": ["1.0625rem", { "lineHeight": "1.625rem", "fontWeight": "300" }], "label-sm": ["0.6875rem", { "lineHeight": "0.75rem", "letterSpacing": "0.05em", "fontWeight": "600" }], "headline-md": ["1.5rem", { "lineHeight": "1.75rem", "fontWeight": "500" }], "headline-lg-mobile": ["1.875rem", { "lineHeight": "2.125rem", "fontWeight": "400" }] } } } }</script><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100vh;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <!-- Firebase -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
+  import { getAnalytics, isSupported } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-analytics.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCThamH38Ivr4Lvp8oM1KMnBK3hckt6uCg",
+    authDomain: "the-baddies-glam.firebaseapp.com",
+    databaseURL: "https://the-baddies-glam-default-rtdb.firebaseio.com",
+    projectId: "the-baddies-glam",
+    storageBucket: "the-baddies-glam.firebasestorage.app",
+    messagingSenderId: "50349208028",
+    appId: "1:50349208028:web:8eae36e1f142912ebc5f19",
+    measurementId: "G-EJFRE46N73"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  window.firebaseApp = app;
+
+  // Analytics only works on http(s) pages in supported browsers
+  isSupported().then((ok) => { if (ok) window.firebaseAnalytics = getAnalytics(app); }).catch(() => {});
+</script>
+</head><body class="bg-surface text-on-surface font-body-md text-body-md min-h-screen relative flex flex-col justify-between selection:bg-secondary-container"><header class="fixed top-0 inset-x-0 z-50 pt-safe"><div class="h-12 px-6 flex items-center justify-between text-on-surface"><div class="flex items-center gap-1.5 font-label-md text-label-md font-medium tracking-tight"><span>9:41</span><span class="text-[10px] text-tertiary">✦</span></div><div class="flex items-center gap-2 text-on-surface"><span class="material-symbols-outlined text-[16px]">signal_cellular_4_bar</span><span class="material-symbols-outlined text-[16px]">wifi</span><div class="flex items-center gap-1 pl-0.5"><span class="font-label-sm text-label-sm">100%</span><span class="material-symbols-outlined text-[18px]">battery_full</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-12 pb-24 bg-surface"><div class="flex flex-col w-full relative select-none">
+<!-- Dynamic Atmospheric Wallpaper Layer -->
+<div class="relative w-full overflow-hidden rounded-xl bg-surface-container-low shadow-2xl pb-10">
+<div class="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-multiply scale-105 transition-transform duration-1000" data-alt="Editorial soft focus portrait with warm blush silk fabrics, sparkling golden vanity dust, rose petal bokeh, high fashion aesthetic with gentle champagne highlights and dreamy ambient glow." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDOctA7PwIKQHh1WCY0Jpka7w8ZlpA_ZAnZUi1_ZDouHCyQ6wqfFLrowTLTuq8mI-o3ZzN4sm4rydeTrQUCPLq07DcvIRA-dagP0js-CtH5TfofP670OSptFIJmW3wVmtzVsv5-8EGgupLUDJPDr_9K6uk1rvpA50_9fyIK5OQtAVw84KdAw5xTe46Cur3UH6UQa2VmImSHgM4x0BH-f1I-EAFUfACL6skLXuB49llV1m6y_bGVD0t9ww')">
+</div>
+<!-- Radiant Ambient Tint Overlay -->
+<div class="absolute inset-0 bg-gradient-to-b from-surface-container/60 via-surface/40 to-surface-container-high/90 backdrop-blur-[2px]"></div>
+<!-- Lock Screen Content Stack -->
+<div class="relative z-10 flex flex-col px-4 pt-2">
+<!-- Top Center Lock Indicator -->
+<div class="flex flex-col items-center justify-center pt-2">
+<div class="flex items-center justify-center w-8 h-8 rounded-full bg-surface-container-lowest/70 backdrop-blur-md shadow-sm text-primary transition-all active:scale-95" id="lock-icon-btn">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+</div>
+<!-- Date Display -->
+<p class="font-body-md text-body-md text-on-surface-variant font-medium tracking-wide mt-3 text-center">
+          Saturday, November 16
+        </p>
+<!-- Signature Large Lock Screen Clock -->
+<h1 class="font-headline-lg-mobile text-[4.75rem] leading-[4.75rem] font-light text-on-surface tracking-tight text-center mt-0.5">
+          09:41
+        </h1>
+</div>
+<!-- Lock Screen Widget Row -->
+<div class="flex items-center justify-center gap-2 mt-4 px-2">
+<!-- Weather Widget Chip -->
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md shadow-sm text-on-surface">
+<span class="text-tertiary-container text-xs">☀️</span>
+<span class="font-label-sm text-label-sm font-medium">Lekki 28°C</span>
+</div>
+<!-- Appointment Widget Chip -->
+<div class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md shadow-sm text-on-surface">
+<span class="text-primary font-bold text-xs">✦</span>
+<span class="font-label-sm text-label-sm font-semibold text-primary">Glam in 2h</span>
+</div>
+<!-- Battery Status Chip -->
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md shadow-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[14px]">bolt</span>
+<span class="font-label-sm text-label-sm font-medium">98%</span>
+</div>
+</div>
+<!-- Push Notification Stack Section -->
+<div class="flex flex-col gap-3 mt-6">
+<!-- Stack Header -->
+<div class="flex items-center justify-between px-2">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm font-semibold tracking-wider uppercase text-on-surface-variant">Notification Center</span>
+<span class="flex h-1.5 w-1.5 rounded-full bg-primary animate-pulse"></span>
+</div>
+<button aria-label="Clear notifications" class="w-6 h-6 rounded-full bg-surface-container-highest/60 flex items-center justify-center text-on-surface-variant hover:bg-surface-container-highest" id="clear-all-btn" type="button">
+<span class="material-symbols-outlined text-[13px]">close</span>
+</button>
+</div>
+<!-- Notification 1: Primary Featured Alert (Expanded VIP Studio Confirmation) -->
+<div class="group relative rounded-lg bg-surface-container-lowest/90 backdrop-blur-xl shadow-lg p-3.5 transition-all duration-300 hover:bg-surface-container-lowest active:scale-[0.99] cursor-pointer" id="notif-1">
+<!-- Glass Top Glint -->
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-sm">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold tracking-wider text-on-surface uppercase">Baddies Glam</span>
+<span class="text-tertiary font-bold text-[10px]">✦ VIP</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">NOW</span>
+</div>
+<!-- Alert Content -->
+<div class="flex flex-col mt-0.5">
+<div class="flex items-center gap-1">
+<h2 class="font-headline-sm text-headline-sm font-medium text-on-surface">Appointment Confirmed</h2>
+<span class="text-secondary text-xs">✨</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+              Director Bukky has accepted your <span class="font-semibold text-primary">Bridal Royalty Glam</span> session for Sat, Nov 16 @ 9:00 AM at Lekki Phase 1 HQ.
+            </p>
+</div>
+<!-- Rich Preview Card Inside Notification -->
+<div class="mt-2.5 p-2 rounded bg-surface-container-low flex items-center gap-2.5">
+<div class="w-12 h-12 rounded-lg bg-cover bg-center shrink-0 shadow-inner" data-alt="Flawless high-fashion bridal soft glam makeup look with glossy rose lips, sculpted cheekbones, winged eyeliner, and delicate pearl veil accessories against soft warm studio lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAlEwj2RvklqFOe67ZwQ5EjMxI0n_OB5bB4_-gIfAvA4uOl9X4Ot_d-SaxdjXVFTBrPI7BimJ9XPzsKb9DSM9CN08M-PqXLUl2TlG6mFVVfMVRUFxr8e7QWza-km4BLcaCLoKSdmjlbuNdmfDeW8HDW2wLwzbYW4dE-ALRvVLldJa3NaI4k6iL-AtqBul10rzTxSPMfRgDEHUhnztb9bHP4RxAGtxJg0NlAQB9AE1782G-hB-53xS6tLg')">
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">Lekki Suite 4 • Director Station</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded-full text-[10px] font-semibold bg-surface-container-highest text-secondary">Deposit Verified</span>
+<span class="font-label-sm text-label-sm text-outline">• 90 mins</span>
+</div>
+</div>
+</div>
+<!-- Notification Action Buttons -->
+<div class="grid grid-cols-2 gap-2 mt-3 pt-1">
+<button class="h-9 px-3 rounded-full bg-surface-container text-on-secondary-container font-label-md text-label-md font-medium text-center transition-all hover:bg-surface-container-high active:scale-95 flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[15px]">event</span>
+              View Details
+            </button>
+<button class="h-9 px-3 rounded-full bg-gradient-to-r from-secondary to-primary text-on-primary font-label-md text-label-md font-semibold text-center shadow-md transition-all hover:opacity-95 active:scale-95 flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[15px]">chat</span>
+              Reply Studio
+            </button>
+</div>
+</div>
+<!-- Notification 2: Secondary (Stacked Studio Chat Reply) -->
+<div class="relative rounded-lg bg-surface-container-lowest/85 backdrop-blur-xl shadow-md p-3.5 transition-all duration-300 hover:bg-surface-container-lowest active:scale-[0.99] cursor-pointer" id="notif-2">
+<div class="flex items-center justify-between pb-1.5">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container shadow-sm">
+<span class="material-symbols-outlined text-[14px]">face_3</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold tracking-wider text-on-surface uppercase">Baddies Glam</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">12m ago</span>
+</div>
+<div class="flex items-start gap-2.5 mt-1">
+<div class="w-9 h-9 rounded-full bg-cover bg-center shrink-0 shadow-sm" data-alt="Charming and polished portrait of a female creative beauty director with styled hair, warm glowing skin, and a luxurious studio apron smiling warmly." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCFOe9133SeaH7L0lkH40jSH7xBP2pehR72gr5I63jiVpOQw8_K04lsJQrKtwMIm6m2iSSE8aHol-6B2M_GDShLUGDPE2H88GbOnq5ei-gQb2P4UDhiRvkcdjN4m_1jQL4FglnDdEuuBKyUo6cw5SmwPhydDlLr4jOGAwFse_cR4Gf6mtHGPWgXaX6FiVwEzb0xDWqk4a9zX4aFH8dkNiaYD40LaX-8ULCTzBnK4vZvlanjGaZvINS4sg')">
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<h3 class="font-label-md text-label-md font-semibold text-on-surface">Director Bukky (Studio Lead)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-snug">
+                Can't wait to glam you up! We've prepared your custom champagne mimosa &amp; soft rose lash set 🥂
+              </p>
+</div>
+</div>
+</div>
+<!-- Notification 3: Tertiary (Pre-Appointment Prep Guide) -->
+<div class="relative rounded-lg bg-surface-container-lowest/80 backdrop-blur-xl shadow-md p-3.5 transition-all duration-300 hover:bg-surface-container-lowest active:scale-[0.99] cursor-pointer" id="notif-3">
+<div class="flex items-center justify-between pb-1.5">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-surface-variant flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[14px]">spa</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold tracking-wider text-on-surface uppercase">Baddies Glam</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">25m ago</span>
+</div>
+<div class="flex flex-col mt-0.5">
+<h3 class="font-label-md text-label-md font-semibold text-on-surface flex items-center gap-1">
+              Pre-Appointment Prep Guide 🌸
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-snug">
+              Arrive with clean, bare skin &amp; moisturized lips for the longest-lasting airbrush finish.
+            </p>
+</div>
+</div>
+</div>
+<!-- Quick Tips Banner / Interactive Micro Delight -->
+<div class="mt-4 p-3 rounded-lg bg-surface-container-high/60 backdrop-blur-md flex items-center justify-between gap-2 shadow-sm">
+<div class="flex items-center gap-2">
+<span class="text-tertiary font-bold text-sm">✦</span>
+<p class="font-label-sm text-label-sm text-on-surface font-normal">
+            Private parking reserved at <span class="font-semibold text-primary">Gate 2 Bay</span>
+</p>
+</div>
+<button class="shrink-0 px-2 py-1 rounded-full bg-surface-container-lowest text-primary font-label-sm text-label-sm font-semibold shadow-xs hover:bg-surface-bright active:scale-95" id="valet-btn" type="button">
+          Directions
+        </button>
+</div>
+<!-- Bottom Unlock Guidance Indicator -->
+<div class="flex flex-col items-center justify-center mt-6 mb-2">
+<span class="material-symbols-outlined text-outline text-[20px] animate-bounce">keyboard_arrow_up</span>
+<span class="font-label-sm text-label-sm font-medium text-outline uppercase tracking-widest mt-0.5">
+          Swipe up to unlock
+        </span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const lockBtn = document.getElementById('lock-icon-btn');
+    if (lockBtn) {
+      lockBtn.addEventListener('click', function() {
+        const icon = lockBtn.querySelector('span');
+        if (icon) {
+          if (icon.textContent === 'lock') {
+            icon.textContent = 'lock_open';
+            lockBtn.classList.add('bg-primary', 'text-on-primary');
+            lockBtn.classList.remove('text-primary');
+            setTimeout(() => {
+              icon.textContent = 'lock';
+              lockBtn.classList.remove('bg-primary', 'text-on-primary');
+              lockBtn.classList.add('text-primary');
+            }, 2400);
+          }
+        }
+      });
+    }
+
+    const clearBtn = document.getElementById('clear-all-btn');
+    if (clearBtn) {
+      clearBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const cards = ['notif-1', 'notif-2', 'notif-3'];
+        cards.forEach((id, index) => {
+          const el = document.getElementById(id);
+          if (el) {
+            setTimeout(() => {
+              el.style.transition = 'all 0.3s ease';
+              el.style.opacity = '0.4';
+              el.style.transform = 'scale(0.97)';
+              setTimeout(() => {
+                el.style.opacity = '1';
+                el.style.transform = 'scale(1)';
+              }, 1200);
+            }, index * 80);
+          }
+        });
+      });
+    }
+
+    const valetBtn = document.getElementById('valet-btn');
+    if (valetBtn) {
+      valetBtn.addEventListener('click', function() {
+        const originalText = valetBtn.textContent;
+        valetBtn.textContent = 'Copied ✓';
+        valetBtn.classList.add('text-secondary');
+        setTimeout(() => {
+          valetBtn.textContent = originalText;
+          valetBtn.classList.remove('text-secondary');
+        }, 1500);
+      });
+    }
+  })();
+</script></main><footer class="fixed bottom-0 inset-x-0 z-50 pointer-events-none pb-safe"><div class="px-8 pb-3 pt-2 flex items-center justify-between"><button aria-label="Flashlight shortcut" class="pointer-events-auto w-12 h-12 rounded-full bg-surface-container-high/80 backdrop-blur-xl text-on-surface shadow-[0_4px_20px_rgba(74,36,55,0.08)] flex items-center justify-center transition-transform active:scale-95 hover:bg-surface-container-highest" type="button"><span class="material-symbols-outlined text-[20px]">flashlight_on</span></button><button aria-label="Camera shortcut" class="pointer-events-auto w-12 h-12 rounded-full bg-surface-container-high/80 backdrop-blur-xl text-on-surface shadow-[0_4px_20px_rgba(74,36,55,0.08)] flex items-center justify-center transition-transform active:scale-95 hover:bg-surface-container-highest" type="button"><span class="material-symbols-outlined text-[20px]">photo_camera</span></button></div><div class="flex justify-center pb-2 pt-1"><div class="w-36 h-1 rounded-full bg-on-surface/20"></div></div></footer></body></html>

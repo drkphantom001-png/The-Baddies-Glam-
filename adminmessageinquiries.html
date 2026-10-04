@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;min-height:100%;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-secondary": "#ffffff", "primary-container": "#cd3982", "on-tertiary": "#ffffff", "secondary-container": "#ff78b5", "surface-container-high": "#ffe0eb", "inverse-primary": "#ffb0cd", "outline": "#8a7078", "surface-container-low": "#fff0f4", "secondary-fixed": "#ffd9e5", "error-container": "#ffdad6", "on-primary-container": "#fffbff", "surface-variant": "#ffd8e7", "tertiary-container": "#9b6c00", "on-error-container": "#93000a", "on-tertiary-fixed": "#281900", "secondary": "#a6306c", "surface-dim": "#ffcce1", "outline-variant": "#ddbfc8", "inverse-surface": "#4a2437", "inverse-on-surface": "#ffecf2", "surface-container": "#ffe8ef", "primary": "#ad1b69", "on-tertiary-container": "#fffbff", "surface-container-highest": "#ffd8e7", "on-surface": "#310f22", "on-primary-fixed-variant": "#8d0052", "on-error": "#ffffff", "on-surface-variant": "#574148", "tertiary-fixed": "#ffdeac", "on-background": "#310f22", "primary-fixed": "#ffd9e4", "on-secondary-fixed-variant": "#871353", "error": "#ba1a1a", "on-primary": "#ffffff", "surface-bright": "#fff8f8", "secondary-fixed-dim": "#ffb0ce", "on-tertiary-fixed-variant": "#5f4100", "surface-container-lowest": "#ffffff", "on-secondary-fixed": "#3e0022", "background": "#fff8f8", "tertiary-fixed-dim": "#f9bc50", "primary-fixed-dim": "#ffb0cd", "tertiary": "#7b5500", "on-secondary-container": "#770148", "on-primary-fixed": "#3e0021", "surface-tint": "#b01f6b", "surface": "#fff8f8" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "space-xl": "2.25rem", "space-2xl": "3rem", "gutter-tablet": "1.5rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "gutter": "1rem", "margin": "1.25rem", "space-sm": "0.5rem", "space-md": "1rem", "margin-tablet": "2rem" }, fontFamily: { "headline-md": ["EB Garamond"], "label-md": ["Outfit"], "body-sm": ["Outfit"], "headline-sm": ["EB Garamond"], "body-lg": ["Outfit"], "label-sm": ["Outfit"], "headline-lg-mobile": ["EB Garamond"], "display-lg": ["EB Garamond"], "body-md": ["Outfit"], "display-lg-mobile": ["EB Garamond"], "label-lg": ["Outfit"], "headline-lg": ["EB Garamond"] }, fontSize: { "headline-md": ["1.5rem", { "lineHeight": "1.75rem", "fontWeight": "500" }], "label-md": ["0.75rem", { "lineHeight": "0.875rem", "letterSpacing": "0.06em", "fontWeight": "500" }], "body-sm": ["0.8125rem", { "lineHeight": "1.25rem", "fontWeight": "400" }], "headline-sm": ["1.25rem", { "lineHeight": "1.5rem", "fontWeight": "600" }], "body-lg": ["1.0625rem", { "lineHeight": "1.625rem", "fontWeight": "300" }], "label-sm": ["0.6875rem", { "lineHeight": "0.75rem", "letterSpacing": "0.05em", "fontWeight": "600" }], "headline-lg-mobile": ["1.875rem", { "lineHeight": "2.125rem", "fontWeight": "400" }], "display-lg": ["3.25rem", { "lineHeight": "3.5rem", "letterSpacing": "-0.02em", "fontWeight": "400" }], "body-md": ["0.9375rem", { "lineHeight": "1.5rem", "fontWeight": "300" }], "display-lg-mobile": ["2.5rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.01em", "fontWeight": "400" }], "label-lg": ["0.875rem", { "lineHeight": "1rem", "letterSpacing": "0.08em", "fontWeight": "500" }], "headline-lg": ["2.25rem", { "lineHeight": "2.5rem", "fontWeight": "400" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <!-- Firebase -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
+  import { getAnalytics, isSupported } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-analytics.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCThamH38Ivr4Lvp8oM1KMnBK3hckt6uCg",
+    authDomain: "the-baddies-glam.firebaseapp.com",
+    databaseURL: "https://the-baddies-glam-default-rtdb.firebaseio.com",
+    projectId: "the-baddies-glam",
+    storageBucket: "the-baddies-glam.firebasestorage.app",
+    messagingSenderId: "50349208028",
+    appId: "1:50349208028:web:8eae36e1f142912ebc5f19",
+    measurementId: "G-EJFRE46N73"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  window.firebaseApp = app;
+
+  // Analytics only works on http(s) pages in supported browsers
+  isSupported().then((ok) => { if (ok) window.firebaseAnalytics = getAnalytics(app); }).catch(() => {});
+</script>
+</head><body class="bg-surface text-on-surface flex flex-col min-h-screen selection:bg-secondary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_12px_rgba(74,36,55,0.06)]"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm min-w-0"><img alt="Brand logo. - Primary color: #d13c85
+- Font: ebGaramond
+- Mode: light
+- Roundness: rounded-full
+" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1V4bizUExCofWj8R8Oz0xr9o_Xo2UihNpMz-SrJq7o_-bXJ8pH6Bbc0JUU2YOFp6PXw96j1d7qmnfXY2Yfk7_d-z5HUuzKn38Q_K15MXhHAwVPk_vQKJlfuGzFGKxLJjY7yxktf7FcbPifV--4iwaal2mgYyEgp9yHoR0Nxjb0k1LDRIX8KdP9tptkzMHrFaWYiw5HuQv6FxUOACBKMORCYr-w2GAjCKre1W9GAt1e0s8cvXRVRIFK-wp0"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-1.5"><span class="font-headline-sm text-headline-sm text-on-surface truncate leading-none">Studio Admin</span><span class="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm uppercase tracking-wider font-semibold shadow-[0_0_8px_rgba(249,188,80,0.4)]"><span class="text-[10px] leading-none text-tertiary">✦</span>OWNER</span></div><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Appointments</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[24px]">notifications</span><span class="absolute top-1.5 right-1.5 flex h-4 min-w-[1rem] px-1 items-center justify-center rounded-full bg-primary text-on-primary font-label-sm text-[10px] font-bold shadow-[0_0_8px_rgba(205,57,130,0.5)] animate-pulse">3</span></button><button aria-label="Owner Profile" class="w-11 h-11 flex items-center justify-center"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-28 bg-surface"><div class="flex flex-col w-full">
+<div class="w-full max-w-xl mx-auto px-gutter flex flex-col gap-space-lg">
+<!-- 1. Header & Live Sync Status -->
+<section class="flex flex-col gap-space-xs mt-space-md">
+<div class="inline-flex items-center gap-1.5 self-start px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed text-label-sm font-label-sm uppercase tracking-wider font-semibold shadow-sm">
+<span class="text-secondary text-[11px] leading-none">✦</span>
+<span>STUDIO CLIENT DISPATCH • DIRECT TWO-WAY INBOX</span>
+</div>
+<div class="flex items-center justify-between mt-1">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Messages &amp; Inquiries</h1>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span>Live Sync</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Real-time communication with clients, appointment follow-ups, and booking questions.</p>
+</section>
+<!-- 2. Admin Message Metrics / Quick Stats -->
+<section class="grid grid-cols-3 gap-2.5">
+<div class="flex flex-col p-3 rounded-lg bg-surface-container-lowest shadow-[0_4px_20px_rgba(74,36,55,0.05)] relative overflow-hidden">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Unread</span>
+<span class="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(205,57,130,0.8)]"></span>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary">4 New</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant mt-0.5">High priority</span>
+</div>
+<div class="flex flex-col p-3 rounded-lg bg-surface-container-lowest shadow-[0_4px_20px_rgba(74,36,55,0.05)]">
+<span class="font-label-sm text-label-sm text-on-surface-variant mb-1">Avg Response</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">12 mins</span>
+<span class="font-label-sm text-[10px] text-secondary font-medium mt-0.5">✦ 18% faster</span>
+</div>
+<div class="flex flex-col p-3 rounded-lg bg-surface-container-lowest shadow-[0_4px_20px_rgba(74,36,55,0.05)]">
+<span class="font-label-sm text-label-sm text-on-surface-variant mb-1">Active Threads</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">18 Active</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant mt-0.5">Lagos &amp; Dest.</span>
+</div>
+</section>
+<!-- 3. Search & Filter Bar -->
+<section class="flex flex-col gap-space-sm">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full h-12 pl-10 pr-10 rounded-full bg-surface-container-lowest font-body-sm text-body-sm text-on-surface placeholder:text-outline shadow-[0_2px_12px_rgba(74,36,55,0.04)] focus:outline-none focus:bg-surface-container-low transition-all" placeholder="Search client, phone (+234), service..." type="text"/>
+<button aria-label="Clear or voice search" class="absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+<!-- Filter Pills -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar -mx-gutter px-gutter">
+<button class="shrink-0 px-4 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-[0_4px_14px_rgba(209,60,133,0.3)] transition-transform active:scale-95">
+          All (18)
+        </button>
+<button class="shrink-0 flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-variant transition-colors">
+<span>Unread</span>
+<span class="px-1.5 py-0.2 rounded-full bg-primary text-on-primary text-[10px] font-bold">4</span>
+</button>
+<button class="shrink-0 px-3.5 py-2 rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high transition-colors">
+          Pending Booking (3)
+        </button>
+<button class="shrink-0 flex items-center gap-1 px-3.5 py-2 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md">
+<span class="text-tertiary text-[10px]">✦</span> VIP Brides (6)
+        </button>
+<button class="shrink-0 px-3.5 py-2 rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high transition-colors">
+          General Inquiries (5)
+        </button>
+</div>
+</section>
+<!-- 4. Quick Reply Templates Bar / Preset Dispatch -->
+<section class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">1-Tap Preset Responses</span>
+<button class="font-label-sm text-label-sm text-primary flex items-center gap-0.5">
+<span>Manage</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+<div class="flex items-center gap-2 overflow-x-auto pb-1 -mx-gutter px-gutter">
+<button class="shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-[0_2px_8px_rgba(74,36,55,0.04)] hover:bg-surface-container transition-colors">
+<span class="text-primary text-[14px] leading-none">⚡</span>
+<span>Slot Confirmation</span>
+</button>
+<button class="shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-[0_2px_8px_rgba(74,36,55,0.04)] hover:bg-surface-container transition-colors">
+<span class="text-tertiary text-[14px] leading-none">✨</span>
+<span>Skin Prep Guide</span>
+</button>
+<button class="shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-[0_2px_8px_rgba(74,36,55,0.04)] hover:bg-surface-container transition-colors">
+<span class="text-primary text-[14px] leading-none">📍</span>
+<span>Studio Directions (Lekki)</span>
+</button>
+<button class="shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-[0_2px_8px_rgba(74,36,55,0.04)] hover:bg-surface-container transition-colors">
+<span class="text-secondary text-[14px] leading-none">💳</span>
+<span>Deposit Reminder</span>
+</button>
+</div>
+</section>
+<!-- 5. Active Conversation Threads List -->
+<section class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Conversations</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Real-time sync</span>
+</div>
+<!-- Thread 1: VIP & Urgent Unread -->
+<article class="flex flex-col p-4 rounded-xl bg-surface-container-lowest shadow-[0_6px_24px_rgba(74,36,55,0.07)] relative">
+<div class="flex items-start gap-3">
+<div class="relative shrink-0">
+<img class="w-12 h-14 object-cover rounded-t-full rounded-b-md shadow-sm" data-alt="Editorial portrait of an elegant West African bride with radiant dew-finish bridal makeup, ornate gold jewelry, soft studio blush illumination." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi27iFY7UdxG1alNXHChgVnTXrafj7OF4eYJGUNUtE4erXSiRikGm94O-0_tEyCfqzIyTAHH1UkBTVqW0nWkQv6K_EovGb_0sGrmEtnnTI5l8bc1G49SOyY3bCL8rdvUIlZ-2qqSqIi3eE1DixvZKIKtyn0Tb4olaPqMhT9xEbwoLBPDSayr2WUb5vrvZRqrJ31oTRZlg_aZ7ZRg5saPJngmCJaM9bf15ZsTymEm7HHF1QwZXj-RVngw"/>
+<span class="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-primary ring-2 ring-surface-container-lowest shadow-sm"></span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Amara Johnson</span>
+<span class="font-label-sm text-[11px] text-primary font-semibold shrink-0">Just now</span>
+</div>
+<div class="flex flex-wrap items-center gap-1.5 mt-0.5">
+<span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[10px] font-bold">
+<span class="text-tertiary text-[9px]">✦</span> VIP BRIDE
+              </span>
+<span class="px-2 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-[10px] font-semibold">
+                Needs Reply
+              </span>
+<span class="font-label-sm text-[11px] text-on-surface-variant truncate">Sat, 16 Nov</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-normal mt-2 line-clamp-2">
+              “Hi! Can I add 2 bridesmaids to my glam session? Also what time should they arrive?”
+            </p>
+</div>
+</div>
+<div class="flex items-center justify-between gap-2 mt-3 pt-3 bg-surface-container-low -mx-4 -mb-4 px-4 py-2.5 rounded-b-xl">
+<button class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span>
+<span>#BG-2849</span>
+</button>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-full bg-surface-container-highest text-secondary font-label-sm text-label-sm hover:bg-secondary-fixed transition-colors">
+              View Booking
+            </button>
+<button class="px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow-[0_2px_10px_rgba(209,60,133,0.3)] transition-transform active:scale-95">
+              Quick Reply
+            </button>
+</div>
+</div>
+</article>
+<!-- Thread 2: Confirmed Appointment -->
+<article class="flex flex-col p-4 rounded-xl bg-surface-container-lowest shadow-[0_4px_16px_rgba(74,36,55,0.04)]">
+<div class="flex items-start gap-3">
+<div class="relative shrink-0">
+<img class="w-12 h-14 object-cover rounded-t-full rounded-b-md shadow-sm" data-alt="Close up glam portrait of a stylish fashionable Nigerian woman with luminous glossy lips, rose shimmer eyeshadow, and sleek parted hair in soft vanity lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUP3UOl5auLqpsFOmOPoJFksAJoLUn1hzzgcWxacq2JexQrz9CAV1oyom_zCuAoMsO2nWVTDoAEO04WdquXLWdgHsEQWehC9Ej2D9PrOugsUTsWhNqYapnUfAsvEWKMnFGIu_iUd58wcv_JFeL-x6BzoK5Z6RA8goSxGeWue0KEPmj7HVELjA0wtf6s721FvNrA0oj3jFpiMKIylFgOQpMrxMa7KXK8AoIAogYTI8S0Ws9BH33NulBBA"/>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Folake Adeleke</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant shrink-0">28m ago</span>
+</div>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-secondary font-label-sm text-[10px] font-semibold">
+                Confirmed • ₦20,000
+              </span>
+<span class="font-label-sm text-[11px] text-on-surface-variant truncate">Sun, 17 Nov</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 line-clamp-2">
+<span class="text-primary font-medium">You:</span> “Artist assigned: Bukky. We will arrive 15 minutes before your slot with the lighting ring kit!”
+            </p>
+<div class="flex items-center justify-end gap-1 mt-1.5 text-secondary">
+<span class="font-label-sm text-[10px]">Delivered</span>
+<span class="material-symbols-outlined text-[15px] leading-none">done_all</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Thread 3: New Inquiry / Price Question -->
+<article class="flex flex-col p-4 rounded-xl bg-surface-container-lowest shadow-[0_4px_16px_rgba(74,36,55,0.04)]">
+<div class="flex items-start gap-3">
+<div class="w-12 h-14 rounded-t-full rounded-b-md bg-secondary-fixed flex items-center justify-center text-primary font-headline-sm shrink-0">
+            CE
+          </div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Chidinma Eze</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant shrink-0">1h ago</span>
+</div>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-[10px] font-semibold">
+                New Inquiry
+              </span>
+<span class="font-label-sm text-[11px] text-on-surface-variant truncate">+234 812 555 0192</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-normal mt-2 line-clamp-2">
+              “Good afternoon! Do you travel to Abuja for wedding weekends? What is the booking deposit required?”
+            </p>
+<div class="flex items-center justify-between mt-3 pt-2">
+<span class="font-label-sm text-[11px] text-primary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> 1 Unread
+              </span>
+<button class="px-3 py-1 rounded-full bg-surface-container-low text-primary font-label-sm text-label-sm hover:bg-surface-container-high transition-colors">
+                Open Chat
+              </button>
+</div>
+</div>
+</div>
+</article>
+<!-- Thread 4: Masterclass Learner -->
+<article class="flex flex-col p-4 rounded-xl bg-surface-container-low opacity-90 shadow-sm">
+<div class="flex items-start gap-3">
+<div class="relative shrink-0">
+<img class="w-12 h-14 object-cover rounded-t-full rounded-b-md" data-alt="Portrait of an aspiring makeup student smiling warmly with clean glowing skin and professional makeup brushes in a stylish blush beauty academy studio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnrWDq0OKANh-hTdKfgCVyI2g3TP8kjmnjDIKi_TFy-U5H4ESNaeXuSVs4un_hOgywQRIBRG7BR1BM9kAvAcko6CJoYpfb2JB5R9cj_oYy-NIiqaBmqGIwjPbXUI9THXiB7E-xqKk5IuZFmRQc0hdJW2W90rj22F2l0JpvNSuDEnRIjJyQRFdu-fwAZzYgjpHaW7hG2Aem_CW2pySrHV7RYBpioTg97fYyXfFhgkBHG6EkZvTRkw2Qtg"/>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Blessing Okon</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant shrink-0">Yesterday</span>
+</div>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-variant text-on-surface-variant font-label-sm text-[10px]">
+                1-on-1 Masterclass
+              </span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-[9px] uppercase">
+                Resolved
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 line-clamp-2">
+              “Thank you so much! I downloaded the brush kit guide. See you on Tuesday.”
+            </p>
+</div>
+</div>
+</article>
+</section>
+<!-- 6. Active Conversation Quick Composer -->
+<section class="flex flex-col rounded-xl bg-surface-container-lowest shadow-[0_8px_30px_rgba(74,36,55,0.08)] overflow-hidden">
+<!-- Composer Header -->
+<div class="flex items-center justify-between px-4 py-3 bg-gradient-to-r from-surface-container-low to-surface-container-high">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px]">reply</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-[10px] uppercase text-primary font-bold tracking-wider">Replying to VIP Thread</span>
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Amara Johnson (Bridal VIP)</span>
+</div>
+</div>
+<button aria-label="Minimize composer" class="text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-[20px]">unfold_less</span>
+</button>
+</div>
+<!-- Quick Preset Suggestions inside Composer -->
+<div class="flex items-center gap-1.5 px-4 pt-3 overflow-x-auto no-scrollbar">
+<span class="font-label-sm text-[10px] text-on-surface-variant shrink-0">Insert:</span>
+<button class="shrink-0 px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-[11px] hover:bg-surface-variant transition-colors">
+          +₦30k Bridal Add-on
+        </button>
+<button class="shrink-0 px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-[11px] hover:bg-surface-variant transition-colors">
+          Arrival Time: 09:00 AM
+        </button>
+<button class="shrink-0 px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-[11px] hover:bg-surface-variant transition-colors">
+          Attach Glam Prep PDF
+        </button>
+</div>
+<!-- Textarea Input -->
+<div class="p-4 flex flex-col gap-2.5">
+<div class="relative w-full rounded-lg bg-surface-container-low p-3">
+<textarea class="w-full bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none resize-none" placeholder="Type your response or tap a preset above..." rows="3">Hi Amara! Absolutely, we have 2 extra vanity chairs open at 09:00 AM. Adding 2 bridesmaids will be +₦30,000 with champagne prep included. Shall I update your booking invoice?</textarea>
+<div class="flex items-center justify-between pt-2">
+<div class="flex items-center gap-2">
+<button aria-label="Attach lookbook photo" class="w-8 h-8 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-primary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[18px]">add_photo_alternate</span>
+</button>
+<button aria-label="Insert template" class="w-8 h-8 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-primary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[18px]">auto_stories</span>
+</button>
+<button aria-label="Voice note" class="w-8 h-8 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-primary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[18px]">mic</span>
+</button>
+</div>
+<span class="font-label-sm text-[10px] text-on-surface-variant">168 / 500</span>
+</div>
+</div>
+<!-- Dispatch Button & Sync Status -->
+<div class="flex items-center justify-between gap-3 pt-1">
+<div class="flex items-center gap-1.5 text-on-surface-variant min-w-0">
+<span class="material-symbols-outlined text-secondary text-[16px] shrink-0">notifications_active</span>
+<span class="font-label-sm text-[10px] leading-tight truncate">Direct push &amp; app tracker sync active</span>
+</div>
+<button class="shrink-0 flex items-center gap-2 px-5 py-3 rounded-full bg-gradient-to-r from-[#ee6aa7] to-[#d13c85] text-on-primary font-label-md text-label-md shadow-[0_8px_20px_-4px_rgba(209,60,133,0.35)] transition-transform active:scale-95">
+<span>Send Direct</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Empty State Reminder / Delight Pill -->
+<div class="flex items-center justify-center gap-2 py-3 px-4 rounded-full bg-surface-container text-on-surface-variant text-center font-label-sm text-label-sm my-2">
+<span class="text-tertiary">✦</span>
+<span>All 4 priority threads assigned to studio desk stylists</span>
+<span class="text-tertiary">✦</span>
+</div>
+</div>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-4px_20px_rgba(74,36,55,0.06)]" data-active-classes="text-primary font-semibold"><div class="h-20 px-gutter flex items-center justify-around"><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="appointments" href="#"><span class="material-symbols-outlined text-[22px]">calendar_today</span><span class="font-label-sm text-label-sm tracking-wide mt-0.5">Appts</span><span class="absolute top-0 right-1.5 px-1 min-w-[15px] h-[15px] flex items-center justify-center rounded-full bg-primary text-on-primary font-label-sm text-[9px] font-bold shadow-[0_0_6px_rgba(173,27,105,0.4)]">2</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="portfolio" href="#"><span class="material-symbols-outlined text-[22px]">photo_library</span><span class="font-label-sm text-label-sm tracking-wide mt-0.5">Portfolio</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="services" href="#"><span class="material-symbols-outlined text-[22px]">spa</span><span class="font-label-sm text-label-sm tracking-wide mt-0.5">Services</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="messages" href="#"><span class="material-symbols-outlined text-[22px]">forum</span><span class="font-label-sm text-label-sm tracking-wide mt-0.5">Messages</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[22px]">tune</span><span class="font-label-sm text-label-sm tracking-wide mt-0.5">Settings</span></a></div></nav></body></html>

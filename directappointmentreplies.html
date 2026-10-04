@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-container-high": "#ffe0eb", "on-error": "#ffffff", "on-secondary-fixed-variant": "#871353", "inverse-surface": "#4a2437", "outline-variant": "#ddbfc8", "surface-container": "#ffe8ef", "on-secondary": "#ffffff", "background": "#fff8f8", "tertiary-container": "#9b6c00", "primary-fixed": "#ffd9e4", "outline": "#8a7078", "on-surface": "#310f22", "error": "#ba1a1a", "on-primary": "#ffffff", "on-tertiary": "#ffffff", "on-tertiary-container": "#fffbff", "error-container": "#ffdad6", "inverse-on-surface": "#ffecf2", "surface-dim": "#ffcce1", "on-tertiary-fixed": "#281900", "primary": "#ad1b69", "surface-container-low": "#fff0f4", "tertiary-fixed": "#ffdeac", "surface-tint": "#b01f6b", "on-secondary-container": "#770148", "surface-bright": "#fff8f8", "inverse-primary": "#ffb0cd", "primary-container": "#cd3982", "surface-container-highest": "#ffd8e7", "on-primary-container": "#fffbff", "surface": "#fff8f8", "tertiary-fixed-dim": "#f9bc50", "surface-variant": "#ffd8e7", "on-primary-fixed": "#3e0021", "on-primary-fixed-variant": "#8d0052", "secondary": "#a6306c", "primary-fixed-dim": "#ffb0cd", "secondary-fixed": "#ffd9e5", "on-error-container": "#93000a", "surface-container-lowest": "#ffffff", "secondary-container": "#ff78b5", "on-secondary-fixed": "#3e0022", "on-background": "#310f22", "tertiary": "#7b5500", "on-surface-variant": "#574148", "secondary-fixed-dim": "#ffb0ce", "on-tertiary-fixed-variant": "#5f4100" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "gutter-tablet": "1.5rem", "space-md": "1rem", "space-2xl": "3rem", "margin": "1.25rem", "space-xl": "2.25rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "gutter": "1rem", "margin-tablet": "2rem" }, fontFamily: { "headline-lg-mobile": ["EB Garamond"], "label-lg": ["Outfit"], "label-sm": ["Outfit"], "label-md": ["Outfit"], "body-md": ["Outfit"], "body-sm": ["Outfit"], "body-lg": ["Outfit"], "display-lg-mobile": ["EB Garamond"], "headline-sm": ["EB Garamond"], "display-lg": ["EB Garamond"], "headline-lg": ["EB Garamond"], "headline-md": ["EB Garamond"] }, fontSize: { "headline-lg-mobile": ["1.875rem", { lineHeight: "2.125rem", fontWeight: "400" }], "label-lg": ["0.875rem", { lineHeight: "1rem", letterSpacing: "0.08em", fontWeight: "500" }], "label-sm": ["0.6875rem", { lineHeight: "0.75rem", letterSpacing: "0.05em", fontWeight: "600" }], "label-md": ["0.75rem", { lineHeight: "0.875rem", letterSpacing: "0.06em", fontWeight: "500" }], "body-md": ["0.9375rem", { lineHeight: "1.5rem", fontWeight: "300" }], "body-sm": ["0.8125rem", { lineHeight: "1.25rem", fontWeight: "400" }], "body-lg": ["1.0625rem", { lineHeight: "1.625rem", fontWeight: "300" }], "display-lg-mobile": ["2.5rem", { lineHeight: "2.75rem", letterSpacing: "-0.01em", fontWeight: "400" }], "headline-sm": ["1.25rem", { lineHeight: "1.5rem", fontWeight: "600" }], "display-lg": ["3.25rem", { lineHeight: "3.5rem", letterSpacing: "-0.02em", fontWeight: "400" }], "headline-lg": ["2.25rem", { lineHeight: "2.5rem", fontWeight: "400" }], "headline-md": ["1.5rem", { lineHeight: "1.75rem", fontWeight: "500" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<!-- Firebase -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
+  import { getAnalytics, isSupported } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-analytics.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCThamH38Ivr4Lvp8oM1KMnBK3hckt6uCg",
+    authDomain: "the-baddies-glam.firebaseapp.com",
+    databaseURL: "https://the-baddies-glam-default-rtdb.firebaseio.com",
+    projectId: "the-baddies-glam",
+    storageBucket: "the-baddies-glam.firebasestorage.app",
+    messagingSenderId: "50349208028",
+    appId: "1:50349208028:web:8eae36e1f142912ebc5f19",
+    measurementId: "G-EJFRE46N73"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  window.firebaseApp = app;
+
+  // Analytics only works on http(s) pages in supported browsers
+  isSupported().then((ok) => { if (ok) window.firebaseAnalytics = getAnalytics(app); }).catch(() => {});
+</script>
+</head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_4px_20px_rgba(74,36,55,0.05)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm"><img alt="Baddies Glam Monogram App Icon" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V2q249W562KWvyXdA-xs8j5C-cd7emTLlO1P5w7hQyecuXBLIFDwflOm1WnrxMxwebEIdI8r2HBujO2O65Cu8OJQ3Eg164VXS9IIDYI13wS4dOtLAgf2DJWzBvIpQpycKk8gBhYC9WA6YW-0IJnjU-AM3GA4XUKwbIAZhCfjv3YltrYt46-FrpWi0GCONtxzxp5zV8psQt2s8q7_KdiuTzX4GD5VwP4byMKsWFpiGIbq_Uh8MmIF78wNlq"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-none tracking-tight">Baddies Glam</span><span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">Book</span></div></div><div class="flex items-center gap-space-sm"><a aria-label="Chat with Studio" class="min-h-[44px] min-w-[44px] px-space-sm py-space-xs rounded-full bg-surface-container-high/80 text-primary flex items-center justify-center gap-1 shadow-[0_2px_8px_rgba(209,60,133,0.15)] active:scale-95 transition-all" href="https://wa.me/" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[20px]">chat_bubble</span><span class="font-label-sm text-label-sm font-semibold pr-1">Chat</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-[6.5rem] bg-surface min-h-screen"><div class="flex flex-col w-full px-margin pb-space-xl">
+<!-- Subtle decorative ambient flare -->
+<div class="relative w-full overflow-hidden pt-space-md mb-space-lg">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="text-tertiary-fixed-dim text-sm">✦</span>
+<span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">Bespoke Artistry</span>
+<span class="text-tertiary-fixed-dim text-sm">✦</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">Reserve Your Glam Date</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Secure your slot in minutes. Direct instant notification sent to the Studio Admin dashboard.</p>
+</div>
+<!-- Stepper / Perks Pill Carousel -->
+<div class="flex items-center gap-2 overflow-x-auto pb-2 mb-space-lg no-scrollbar">
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-sm text-label-sm">Skin-Prep Included</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">timer</span>
+<span class="font-label-sm text-label-sm">Instant Slot Hold</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-label-sm text-label-sm">VIP Studio Perk</span>
+</div>
+</div>
+<!-- Main Booking Form Card -->
+<form class="flex flex-col gap-space-lg bg-surface-container-lowest/90 backdrop-blur-md rounded-lg p-space-md shadow-[0_4px_24px_rgba(74,36,55,0.06)]" id="booking-form" onsubmit="event.preventDefault(); submitBooking();">
+<!-- Step 1: Personal Info -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-1.5" for="client-name">
+<span class="w-5 h-5 rounded-full bg-primary-fixed text-primary flex items-center justify-center font-bold text-[10px]">1</span>
+          Full Name
+        </label>
+<span class="text-xs text-secondary italic">Required</span>
+</div>
+<div class="relative w-full">
+<input class="w-full rounded-full bg-surface-container-low px-5 py-3 text-on-surface placeholder:text-outline placeholder:italic text-body-md font-body-md focus:bg-surface-container-lowest focus:outline-none transition-all shadow-inner" id="client-name" placeholder="e.g. Amara Johnson" required="" type="text"/>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-outline-variant text-[20px]">person</span>
+</div>
+</div>
+<!-- Step 2: Contact with Nigerian Flag -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between"><label class="font-label-md text-label-md text-on-surface flex items-center gap-1.5" for="client-phone">
+<span class="w-5 h-5 rounded-full bg-primary-fixed text-primary flex items-center justify-center font-bold text-[10px]">2</span>
+          Client Phone Number
+        </label>
+<span class="font-label-sm text-label-sm text-secondary">Instant direct booking notifications</span></div>
+<div class="flex items-center w-full rounded-full bg-surface-container-low overflow-hidden focus-within:bg-surface-container-lowest transition-all shadow-inner px-2">
+<div class="flex items-center gap-1.5 px-3 py-2 text-on-surface select-none shrink-0 bg-surface-container-high/60 rounded-full my-1">
+<!-- Nigeria Flag SVG Icon -->
+<svg class="w-5 h-3.5 rounded-[2px] shadow-sm" viewbox="0 0 640 480">
+<g fill-rule="evenodd" stroke-width="1pt">
+<path d="M0 0h213.3v480H0z" fill="#008751"></path>
+<path d="M213.3 0h213.4v480H213.3z" fill="#fff"></path>
+<path d="M426.7 0H640v480H426.7z" fill="#008751"></path>
+</g>
+</svg>
+<span class="font-label-md text-label-md font-semibold text-on-surface">+234</span>
+</div>
+<input class="w-full bg-transparent px-3 py-3 text-on-surface placeholder:text-outline placeholder:italic text-body-md font-body-md focus:outline-none" id="client-phone" placeholder="0916 164 5015" required="" type="tel"/>
+</div>
+</div>
+<!-- Step 3: Select Service -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-primary-fixed text-primary flex items-center justify-center font-bold text-[10px]">3</span>
+          Select Glam Experience
+        </label>
+<span class="text-tertiary font-label-sm text-label-sm flex items-center gap-0.5">
+<span class="text-tertiary-fixed-dim">✦</span> Luxury Kit
+        </span>
+</div>
+<div class="grid grid-cols-1 gap-2.5" id="services-group">
+<!-- Service Option 1 -->
+<label class="service-pill relative flex items-center justify-between p-3.5 rounded-DEFAULT bg-surface-container-low cursor-pointer transition-all active:scale-[0.99] select-none">
+<input checked="" class="sr-only" name="service" onchange="updateServiceSelection(this)" type="radio" value="Bridal Glam"/>
+<div class="flex items-center gap-3">
+<div class="service-check w-5 h-5 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-1.5">
+                Bridal Glam
+                <span class="text-[10px] uppercase font-semibold px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed tracking-wider">VIP</span>
+</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Luxe trial &amp; 12hr waterproofing skin prep</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-lg text-label-lg font-bold text-primary block">₦35,000</span>
+<span class="font-label-sm text-label-sm text-outline">120 mins</span>
+</div>
+</label>
+<!-- Service Option 2 -->
+<label class="service-pill relative flex items-center justify-between p-3.5 rounded-DEFAULT bg-surface-container-low cursor-pointer transition-all active:scale-[0.99] select-none">
+<input class="sr-only" name="service" onchange="updateServiceSelection(this)" type="radio" value="Signature Glam"/>
+<div class="flex items-center gap-3">
+<div class="service-check w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center text-transparent">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Signature Glam</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Red-carpet contour, cut-crease, mink lashes</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-lg text-label-lg font-bold text-primary block">₦15,000</span>
+<span class="font-label-sm text-label-sm text-outline">60 mins</span>
+</div>
+</label>
+<!-- Service Option 3 -->
+<label class="service-pill relative flex items-center justify-between p-3.5 rounded-DEFAULT bg-surface-container-low cursor-pointer transition-all active:scale-[0.99] select-none">
+<input class="sr-only" name="service" onchange="updateServiceSelection(this)" type="radio" value="Photoshoot Makeup"/>
+<div class="flex items-center gap-3">
+<div class="service-check w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center text-transparent">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Photoshoot Makeup</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">HD camera-ready, studio lighting finish</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-lg text-label-lg font-bold text-primary block">₦20,000</span>
+<span class="font-label-sm text-label-sm text-outline">75 mins</span>
+</div>
+</label>
+<!-- Service Option 4 -->
+<label class="service-pill relative flex items-center justify-between p-3.5 rounded-DEFAULT bg-surface-container-low cursor-pointer transition-all active:scale-[0.99] select-none">
+<input class="sr-only" name="service" onchange="updateServiceSelection(this)" type="radio" value="Makeup Lessons"/>
+<div class="flex items-center gap-3">
+<div class="service-check w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center text-transparent">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Makeup Lessons</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">1-on-1 personalized daily routine mastering</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-lg text-label-lg font-bold text-primary block">₦25,000</span>
+<span class="font-label-sm text-label-sm text-outline">90 mins</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Step 4: Preferred Date & Time Slot -->
+<div class="flex flex-col gap-space-sm">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-primary-fixed text-primary flex items-center justify-center font-bold text-[10px]">4</span>
+        Preferred Date &amp; Time Slot
+      </label>
+<!-- Date selector -->
+<div class="relative w-full">
+<input class="w-full rounded-full bg-surface-container-low px-5 py-3 text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition-all shadow-inner" id="booking-date" required="" type="date"/>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-primary pointer-events-none text-[20px]">calendar_month</span>
+</div>
+<!-- Time slot buttons -->
+<div class="grid grid-cols-3 gap-2 mt-1" id="time-slots">
+<button class="time-slot-btn flex flex-col items-center justify-center py-2.5 px-2 rounded-lg bg-primary text-on-primary shadow-[0_4px_16px_rgba(209,60,133,0.25)] transition-all" onclick="selectTimeSlot(this, '9:00 AM')" type="button">
+<span class="font-label-sm text-label-sm opacity-90">Morning</span>
+<span class="font-label-lg text-label-lg font-semibold mt-0.5">9:00 AM</span>
+</button>
+<button class="time-slot-btn flex flex-col items-center justify-center py-2.5 px-2 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-all" onclick="selectTimeSlot(this, '12:30 PM')" type="button">
+<span class="font-label-sm text-label-sm text-outline">Midday</span>
+<span class="font-label-lg text-label-lg font-semibold mt-0.5">12:30 PM</span>
+</button>
+<button class="time-slot-btn flex flex-col items-center justify-center py-2.5 px-2 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-all" onclick="selectTimeSlot(this, '3:30 PM')" type="button">
+<span class="font-label-sm text-label-sm text-outline">Afternoon</span>
+<span class="font-label-lg text-label-lg font-semibold mt-0.5">3:30 PM</span>
+</button>
+</div>
+<input id="selected-time" type="hidden" value="9:00 AM"/>
+</div>
+<!-- Step 5: Event Location Toggle -->
+<div class="flex flex-col gap-space-sm">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-primary-fixed text-primary flex items-center justify-center font-bold text-[10px]">5</span>
+        Event Location
+      </label>
+<div class="grid grid-cols-2 p-1 rounded-full bg-surface-container-high">
+<button class="py-2.5 px-3 rounded-full bg-primary text-on-primary font-label-md text-label-md font-semibold text-center transition-all shadow-sm" id="loc-studio" onclick="toggleLocation('studio')" type="button">
+          Studio Visit <span class="block text-[10px] font-normal opacity-90">Lekki Phase 1</span>
+</button>
+<button class="py-2.5 px-3 rounded-full text-on-surface font-label-md text-label-md font-semibold text-center hover:text-primary transition-all" id="loc-mobile" onclick="toggleLocation('mobile')" type="button">
+          Mobile / On-Site <span class="block text-[10px] font-normal text-secondary">(+Travel Fee)</span>
+</button>
+</div>
+<input id="selected-location" type="hidden" value="Studio Visit (Lekki Phase 1)"/>
+</div>
+<!-- Step 6: Notes & Inspiration -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-1.5" for="glam-notes">
+<span class="w-5 h-5 rounded-full bg-primary-fixed text-primary flex items-center justify-center font-bold text-[10px]">6</span>
+          Glam Notes &amp; Inspiration
+        </label>
+<span class="font-label-sm text-label-sm text-outline italic">Optional</span>
+</div>
+<textarea class="w-full rounded-DEFAULT bg-surface-container-low p-4 text-on-surface placeholder:text-outline placeholder:italic text-body-md font-body-md focus:bg-surface-container-lowest focus:outline-none transition-all shadow-inner resize-none" id="glam-notes" placeholder="Tell us about your event, dress colors, skin type or special requests..." rows="3"></textarea>
+</div>
+<!-- Main Action Button -->
+<div class="flex flex-col gap-3 pt-2"><button class="w-full min-h-[52px] py-3.5 px-6 rounded-full bg-gradient-to-r from-secondary-container via-primary to-secondary text-on-primary font-label-lg text-label-lg font-semibold flex items-center justify-center gap-2 shadow-[0_8px_24px_-4px_rgba(209,60,133,0.38)] active:scale-[0.98] transition-all" type="submit">
+<span class="text-tertiary-fixed-dim text-base">✦</span>
+<span>Submit Glam Appointment</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+<p class="font-label-sm text-label-sm text-center text-secondary font-medium tracking-wide">
+  Sends direct alert to Studio Admin · No WhatsApp needed
+</p>
+<p class="font-body-sm text-body-sm text-center text-on-surface-variant px-2">
+  Appointments go straight into the Baddies Glam Studio management calendar. You can track status &amp; admin replies anytime below.
+</p></div>
+</form>
+<!-- Luxury Studio Guarantee Banner -->
+<div class="mt-space-lg p-space-md rounded-DEFAULT bg-surface-container flex items-center gap-3.5 shadow-[0_2px_12px_rgba(74,36,55,0.04)]">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[22px]">sanitizer</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Strict Cleanliness &amp; Sterilization</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">High-grade sanitized brush kits and hypoallergenic products for all skin profiles.</span>
+</div>
+</div>
+<!-- Status Tracker Card -->
+<div class="mt-space-lg p-space-md rounded-DEFAULT bg-surface-container-low shadow-[0_2px_14px_rgba(74,36,55,0.04)]"><div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">chat_bubble</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Your Appointments &amp; Studio Replies</h3>
+</div>
+<span class="text-xs px-2.5 py-0.5 rounded-full bg-surface-container-high text-secondary font-semibold">Direct Portal</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Check real-time booking confirmation, stylist assignment, and messages directly from our Studio Admin desk.</p>
+<div class="flex items-center gap-2 mb-space-md">
+<input class="flex-1 rounded-full bg-surface-container-lowest px-4 py-2.5 text-on-surface placeholder:text-outline text-body-sm font-body-md focus:outline-none shadow-sm" id="status-phone-input" placeholder="e.g. 0916 164 5015" type="tel" value="0916 164 5015"/>
+<button class="px-4 py-2.5 rounded-full bg-secondary text-on-secondary font-label-md text-label-md font-medium shrink-0 active:scale-95 transition-all" onclick="checkStatus()" type="button">
+    Check Status
+  </button>
+</div>
+<!-- Live Sample Active Booking Card -->
+<div class="flex flex-col gap-3 p-3.5 rounded-DEFAULT bg-surface-container-lowest shadow-sm border border-outline-variant/30" id="status-result">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold text-primary px-2.5 py-0.5 rounded-full bg-primary-fixed">#BG-2849</span>
+<span class="font-label-sm text-label-sm font-semibold px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span> Confirmed by Studio
+    </span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Bridal Glam VIP (120 mins)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Sat, Nov 16 · 9:00 AM • Lekki Phase 1 Studio</span>
+</div>
+<!-- Studio Admin Message Box -->
+<div class="p-3 rounded-DEFAULT bg-surface-container-high/60 flex flex-col gap-1.5">
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-[9px]">BG</div>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Studio Note:</span>
+<span class="text-[10px] text-outline ml-auto">Today, 10:14 AM</span>
+</div>
+<p class="font-body-sm text-body-sm italic text-on-surface-variant pl-7">
+      "We can't wait to glam you, Amara! Your bridal slot is locked in. Please arrive with a bare, moisturized face."
+    </p>
+</div>
+<!-- Reply to Studio input / mini button -->
+<div class="flex items-center gap-2 pt-1">
+<input class="flex-1 rounded-full bg-surface-container-low px-3.5 py-1.5 text-xs text-on-surface placeholder:text-outline focus:outline-none" id="client-reply-input" placeholder="Write reply to Studio Admin..." type="text"/>
+<button class="px-3 py-1.5 rounded-full bg-primary text-on-primary text-xs font-label-sm font-medium hover:bg-secondary active:scale-95 transition-all flex items-center gap-1 shrink-0" onclick="alert('Reply sent to Studio Admin!'); document.getElementById('client-reply-input').value='';" type="button">
+<span>Reply to Studio</span>
+<span class="material-symbols-outlined text-[14px]">send</span>
+</button>
+</div>
+</div></div>
+<!-- Studio Ambient Arch Image -->
+<div class="mt-space-lg flex flex-col items-center">
+<div class="relative w-full h-44 rounded-t-full rounded-b-DEFAULT overflow-hidden shadow-md">
+<div class="w-full h-full bg-cover bg-center" data-alt="Close up of a glamorous beauty makeup vanity station in Lekki Lagos Nigeria with backlit gold vanity mirrors, luxurious brushes, blush pink aesthetic towels, designer cosmetic palettes and warm ambient glow." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCuWjt9qFGRkIF-Y6aq8bujArZGlBpxzfT8izWIn7aguVfoqej5bDGWsntVGN0mOUWAMJGMxQuw-KeU2jFiw9LaY-jXl4H5yN1AbI3O7S8uULF-eom2I5_VMIBPdOKuTpMlfbvtxeylGnNDzD2eqCGL8XAxClzbp95gr7ScJpKi9U27gXTvMTR35SD9_V1JCLeZYCfT-vqzuSQYdul0TzUmwAVBGQ4hsDM6naD3D5gCIF8aH812ChnEWA')">
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/60 via-transparent to-transparent flex items-end p-space-md">
+<div class="text-on-primary">
+<p class="font-label-sm text-label-sm tracking-widest uppercase text-tertiary-fixed-dim">✦ Lekki Studio Lounge</p>
+<p class="font-headline-sm text-headline-sm">We provide champagne &amp; sweet treats upon arrival</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Set default minimum date to today
+  (function initDate() {
+    const today = new Date().toISOString().split('T')[0];
+    const dateInput = document.getElementById('booking-date');
+    if (dateInput) {
+      dateInput.min = today;
+      dateInput.value = today;
+    }
+  })();
+
+  function updateServiceSelection(radio) {
+    const cards = document.querySelectorAll('.service-pill');
+    cards.forEach(card => {
+      const isCurrent = card.contains(radio);
+      const checkIcon = card.querySelector('.service-check');
+      if (isCurrent) {
+        card.classList.remove('bg-surface-container-low');
+        card.classList.add('bg-surface-container-high');
+        if (checkIcon) {
+          checkIcon.classList.remove('bg-surface-container-high', 'text-transparent');
+          checkIcon.classList.add('bg-primary', 'text-on-primary');
+        }
+      } else {
+        card.classList.remove('bg-surface-container-high');
+        card.classList.add('bg-surface-container-low');
+        if (checkIcon) {
+          checkIcon.classList.add('bg-surface-container-high', 'text-transparent');
+          checkIcon.classList.remove('bg-primary', 'text-on-primary');
+        }
+      }
+    });
+  }
+
+  function selectTimeSlot(button, time) {
+    document.querySelectorAll('.time-slot-btn').forEach(btn => {
+      btn.classList.remove('bg-primary', 'text-on-primary', 'shadow-[0_4px_16px_rgba(209,60,133,0.25)]');
+      btn.classList.add('bg-surface-container-low', 'text-on-surface');
+      const sub = btn.querySelector('.font-label-sm');
+      if (sub) {
+        sub.classList.remove('opacity-90');
+        sub.classList.add('text-outline');
+      }
+    });
+    button.classList.add('bg-primary', 'text-on-primary', 'shadow-[0_4px_16px_rgba(209,60,133,0.25)]');
+    button.classList.remove('bg-surface-container-low', 'text-on-surface');
+    const sub = button.querySelector('.font-label-sm');
+    if (sub) {
+      sub.classList.remove('text-outline');
+      sub.classList.add('opacity-90');
+    }
+    document.getElementById('selected-time').value = time;
+  }
+
+  function toggleLocation(type) {
+    const studioBtn = document.getElementById('loc-studio');
+    const mobileBtn = document.getElementById('loc-mobile');
+    const locInput = document.getElementById('selected-location');
+
+    if (type === 'studio') {
+      studioBtn.className = 'py-2.5 px-3 rounded-full bg-primary text-on-primary font-label-md text-label-md font-semibold text-center transition-all shadow-sm';
+      mobileBtn.className = 'py-2.5 px-3 rounded-full text-on-surface font-label-md text-label-md font-semibold text-center hover:text-primary transition-all';
+      locInput.value = 'Studio Visit (Lekki Phase 1)';
+    } else {
+      mobileBtn.className = 'py-2.5 px-3 rounded-full bg-primary text-on-primary font-label-md text-label-md font-semibold text-center transition-all shadow-sm';
+      studioBtn.className = 'py-2.5 px-3 rounded-full text-on-surface font-label-md text-label-md font-semibold text-center hover:text-primary transition-all';
+      locInput.value = 'Mobile / On-Location (+Travel)';
+    }
+  }
+
+  function submitBooking() {
+    const name = document.getElementById('client-name').value.trim();
+    const phone = document.getElementById('client-phone').value.trim();
+    const service = document.querySelector('input[name="service"]:checked')?.value || 'Bridal Glam';
+    const date = document.getElementById('booking-date').value;
+    const time = document.getElementById('selected-time').value;
+    const location = document.getElementById('selected-location').value;
+    const notes = document.getElementById('glam-notes').value.trim();
+
+    if (!name || !phone) {
+      alert('Please fill in your name and WhatsApp number.');
+      return;
+    }
+
+    const message = `Hello Baddies Glam! ✦\n\nI want to reserve my glam appointment:\n\n👤 *Client:* ${name}\n📱 *WhatsApp:* +234 ${phone}\n💄 *Service:* ${service}\n📅 *Date:* ${date}\n⏰ *Time:* ${time}\n📍 *Location:* ${location}${notes ? `\n📝 *Notes:* ${notes}` : ''}\n\nPlease confirm availability and payment details. Thank you!`;
+
+    const encoded = encodeURIComponent(message);
+    window.open(`https://wa.me/2349161645015?text=${encoded}`, '_blank');
+  }
+
+  function checkStatus() {
+    const input = document.getElementById('status-phone-input').value.trim();
+    const resultBox = document.getElementById('status-result');
+    if (!input) {
+      alert('Please enter your WhatsApp number to check status.');
+      return;
+    }
+    resultBox.innerHTML = `
+      <div class="flex items-center justify-between">
+        <span class="font-label-sm text-label-sm text-on-surface-variant">Phone: +234 ${input}</span>
+        <span class="font-label-sm text-label-sm font-semibold text-on-surface">Lekki Studio</span>
+      </div>
+      <div class="flex items-center justify-between p-2.5 rounded-DEFAULT bg-surface-container-high/60">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+          <span class="font-label-md text-label-md font-medium text-on-surface">Artist Allocated:</span>
+        </div>
+        <span class="font-label-sm text-label-sm font-semibold px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed">
+          Lead Artist Blessing
+        </span>
+      </div>
+    `;
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-2xl shadow-[0_-4px_24px_rgba(74,36,55,0.06)]" data-active-classes="text-primary font-semibold relative after:content-['✦'] after:absolute after:-bottom-1 after:text-[8px] after:text-tertiary-fixed-dim"><div class="flex items-center justify-around h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-h-[44px] min-w-[44px] flex-1 text-on-surface-variant/70 hover:text-primary transition-all" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">spa</span><span class="font-label-sm text-label-sm mt-0.5">Home</span></a><a class="flex flex-col items-center justify-center min-h-[44px] min-w-[44px] flex-1 text-on-surface-variant/70 hover:text-primary transition-all" data-path="services" href="#"><span class="material-symbols-outlined text-[22px]">brush</span><span class="font-label-sm text-label-sm mt-0.5">Services</span></a><a class="flex flex-col items-center justify-center min-h-[44px] min-w-[44px] flex-1 text-on-surface-variant/70 hover:text-primary transition-all" data-path="gallery" href="#"><span class="material-symbols-outlined text-[22px]">photo_camera</span><span class="font-label-sm text-label-sm mt-0.5">Gallery</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-h-[44px] min-w-[44px] flex-1 transition-all text-primary font-semibold relative after:content-['✦'] after:absolute after:-bottom-1 after:text-[8px] after:text-tertiary-fixed-dim" data-path="book" href="#"><span class="material-symbols-outlined text-[22px]">calendar_month</span><span class="font-label-sm text-label-sm mt-0.5">Book</span></a><a class="flex flex-col items-center justify-center min-h-[44px] min-w-[44px] flex-1 text-on-surface-variant/70 hover:text-primary transition-all" data-path="contact" href="#"><span class="material-symbols-outlined text-[22px]">alternate_email</span><span class="font-label-sm text-label-sm mt-0.5">Contact</span></a></div></nav></body></html>

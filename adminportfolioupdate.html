@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;min-height:100%;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-secondary": "#ffffff", "primary-container": "#cd3982", "on-tertiary": "#ffffff", "secondary-container": "#ff78b5", "surface-container-high": "#ffe0eb", "inverse-primary": "#ffb0cd", "outline": "#8a7078", "surface-container-low": "#fff0f4", "secondary-fixed": "#ffd9e5", "error-container": "#ffdad6", "on-primary-container": "#fffbff", "surface-variant": "#ffd8e7", "tertiary-container": "#9b6c00", "on-error-container": "#93000a", "on-tertiary-fixed": "#281900", "secondary": "#a6306c", "surface-dim": "#ffcce1", "outline-variant": "#ddbfc8", "inverse-surface": "#4a2437", "inverse-on-surface": "#ffecf2", "surface-container": "#ffe8ef", "primary": "#ad1b69", "on-tertiary-container": "#fffbff", "surface-container-highest": "#ffd8e7", "on-surface": "#310f22", "on-primary-fixed-variant": "#8d0052", "on-error": "#ffffff", "on-surface-variant": "#574148", "tertiary-fixed": "#ffdeac", "on-background": "#310f22", "primary-fixed": "#ffd9e4", "on-secondary-fixed-variant": "#871353", "error": "#ba1a1a", "on-primary": "#ffffff", "surface-bright": "#fff8f8", "secondary-fixed-dim": "#ffb0ce", "on-tertiary-fixed-variant": "#5f4100", "surface-container-lowest": "#ffffff", "on-secondary-fixed": "#3e0022", "background": "#fff8f8", "tertiary-fixed-dim": "#f9bc50", "primary-fixed-dim": "#ffb0cd", "tertiary": "#7b5500", "on-secondary-container": "#770148", "on-primary-fixed": "#3e0021", "surface-tint": "#b01f6b", "surface": "#fff8f8" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "space-xl": "2.25rem", "space-2xl": "3rem", "gutter-tablet": "1.5rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "gutter": "1rem", "margin": "1.25rem", "space-sm": "0.5rem", "space-md": "1rem", "margin-tablet": "2rem" }, fontFamily: { "headline-md": ["EB Garamond"], "label-md": ["Outfit"], "body-sm": ["Outfit"], "headline-sm": ["EB Garamond"], "body-lg": ["Outfit"], "label-sm": ["Outfit"], "headline-lg-mobile": ["EB Garamond"], "display-lg": ["EB Garamond"], "body-md": ["Outfit"], "display-lg-mobile": ["EB Garamond"], "label-lg": ["Outfit"], "headline-lg": ["EB Garamond"] }, fontSize: { "headline-md": ["1.5rem", { "lineHeight": "1.75rem", "fontWeight": "500" }], "label-md": ["0.75rem", { "lineHeight": "0.875rem", "letterSpacing": "0.06em", "fontWeight": "500" }], "body-sm": ["0.8125rem", { "lineHeight": "1.25rem", "fontWeight": "400" }], "headline-sm": ["1.25rem", { "lineHeight": "1.5rem", "fontWeight": "600" }], "body-lg": ["1.0625rem", { "lineHeight": "1.625rem", "fontWeight": "300" }], "label-sm": ["0.6875rem", { "lineHeight": "0.75rem", "letterSpacing": "0.05em", "fontWeight": "600" }], "headline-lg-mobile": ["1.875rem", { "lineHeight": "2.125rem", "fontWeight": "400" }], "display-lg": ["3.25rem", { "lineHeight": "3.5rem", "letterSpacing": "-0.02em", "fontWeight": "400" }], "body-md": ["0.9375rem", { "lineHeight": "1.5rem", "fontWeight": "300" }], "display-lg-mobile": ["2.5rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.01em", "fontWeight": "400" }], "label-lg": ["0.875rem", { "lineHeight": "1rem", "letterSpacing": "0.08em", "fontWeight": "500" }], "headline-lg": ["2.25rem", { "lineHeight": "2.5rem", "fontWeight": "400" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <!-- Firebase -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
+  import { getAnalytics, isSupported } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-analytics.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCThamH38Ivr4Lvp8oM1KMnBK3hckt6uCg",
+    authDomain: "the-baddies-glam.firebaseapp.com",
+    databaseURL: "https://the-baddies-glam-default-rtdb.firebaseio.com",
+    projectId: "the-baddies-glam",
+    storageBucket: "the-baddies-glam.firebasestorage.app",
+    messagingSenderId: "50349208028",
+    appId: "1:50349208028:web:8eae36e1f142912ebc5f19",
+    measurementId: "G-EJFRE46N73"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  window.firebaseApp = app;
+
+  // Analytics only works on http(s) pages in supported browsers
+  isSupported().then((ok) => { if (ok) window.firebaseAnalytics = getAnalytics(app); }).catch(() => {});
+</script>
+</head><body class="bg-surface text-on-surface flex flex-col min-h-screen selection:bg-secondary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_12px_rgba(74,36,55,0.06)]"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm min-w-0"><img alt="Brand logo. - Primary color: #d13c85
+- Font: ebGaramond
+- Mode: light
+- Roundness: rounded-full
+" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1V4bizUExCofWj8R8Oz0xr9o_Xo2UihNpMz-SrJq7o_-bXJ8pH6Bbc0JUU2YOFp6PXw96j1d7qmnfXY2Yfk7_d-z5HUuzKn38Q_K15MXhHAwVPk_vQKJlfuGzFGKxLJjY7yxktf7FcbPifV--4iwaal2mgYyEgp9yHoR0Nxjb0k1LDRIX8KdP9tptkzMHrFaWYiw5HuQv6FxUOACBKMORCYr-w2GAjCKre1W9GAt1e0s8cvXRVRIFK-wp0"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-1.5"><span class="font-headline-sm text-headline-sm text-on-surface truncate leading-none">Studio Admin</span><span class="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm uppercase tracking-wider font-semibold shadow-[0_0_8px_rgba(249,188,80,0.4)]"><span class="text-[10px] leading-none text-tertiary">✦</span>OWNER</span></div><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Appointments</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[24px]">notifications</span><span class="absolute top-1.5 right-1.5 flex h-4 min-w-[1rem] px-1 items-center justify-center rounded-full bg-primary text-on-primary font-label-sm text-[10px] font-bold shadow-[0_0_8px_rgba(205,57,130,0.5)] animate-pulse">3</span></button><button aria-label="Owner Profile" class="w-11 h-11 flex items-center justify-center"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-28 bg-surface"><div class="flex flex-col w-full px-margin pb-space-2xl space-y-space-lg">
+<!-- Top Context & Live Badge Header -->
+<div class="flex flex-col space-y-space-xs mt-space-sm">
+<div class="flex items-center justify-between gap-space-xs flex-wrap">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-primary shadow-sm">
+<span class="text-tertiary font-bold text-[12px]">✦</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Studio Lookbook Manager</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-lowest text-secondary shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-sm text-label-sm font-medium">Live Syncing to Client Gallery</span>
+</div>
+</div>
+<div class="pt-space-xs">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Portfolio &amp; Looks</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+        Upload client transformations, manage featured looks, reorder displays, and publish directly to the client gallery.
+      </p>
+</div>
+</div>
+<!-- 1. Portfolio Metrics & Storage Summary -->
+<div class="grid grid-cols-3 gap-2.5">
+<div class="bg-surface-container-lowest p-3 rounded-lg flex flex-col justify-between shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Total Looks</span>
+<div class="my-1">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">24</span>
+</div>
+<div class="inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-primary font-medium">18 Public</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-lg flex flex-col justify-between shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Views / Loves</span>
+<div class="my-1">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">1.8k</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-medium">+24% this wk</span>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-lg flex flex-col justify-between shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Storage</span>
+<div class="my-1">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">68%</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Cloudinary / S3</span>
+</div>
+</div>
+<!-- 2. Main Action & Quick Upload Area -->
+<div class="flex flex-col space-y-space-sm">
+<button class="w-full h-12 rounded-full bg-gradient-to-r from-secondary-container via-primary-container to-primary text-on-primary font-label-lg text-label-lg font-semibold flex items-center justify-center gap-2 shadow-[0_8px_24px_-4px_rgba(209,60,133,0.35)] active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined text-[20px]">add_photo_alternate</span>
+<span>+ Upload New Look / Shoot</span>
+</button>
+<!-- Tap-to-Upload Dropzone Area -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col items-center text-center shadow-sm">
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary shadow-[0_4px_16px_rgba(209,60,133,0.15)] mb-space-xs">
+<span class="material-symbols-outlined text-[26px]">cloud_upload</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Drop client shoot photos here</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-[280px] mt-1 mb-space-md">
+        Supports high-res JPG, PNG, WEBP up to 25MB. Auto-crops for mobile lookbook.
+      </p>
+<div class="grid grid-cols-2 gap-2.5 w-full">
+<button class="h-10 rounded-full bg-surface-container-lowest text-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[18px]">photo_library</span>
+<span>From Gallery</span>
+</button>
+<button class="h-10 rounded-full bg-surface-container-lowest text-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+<span>Snap Camera</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 3. Filter Tabs & View Controls -->
+<div class="flex flex-col space-y-space-sm pt-space-xs">
+<!-- Horizontal Filter Pill Scroll -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 -mx-margin px-margin no-scrollbar">
+<button class="px-4 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md font-semibold whitespace-nowrap shadow-[0_4px_14px_rgba(173,27,105,0.25)] flex items-center gap-1">
+<span>All (24)</span>
+</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md font-medium whitespace-nowrap shadow-sm hover:text-primary transition-colors">
+<span>Bridal Glow (10)</span>
+</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md font-medium whitespace-nowrap shadow-sm hover:text-primary transition-colors">
+<span>Birthday (6)</span>
+</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md font-medium whitespace-nowrap shadow-sm hover:text-primary transition-colors">
+<span>Editorial (4)</span>
+</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md font-medium whitespace-nowrap shadow-sm hover:text-primary transition-colors">
+<span>Drafts / Hidden (4)</span>
+</button>
+</div>
+<!-- Reorder & Batch Tools Bar -->
+<div class="flex items-center justify-between px-1 py-1">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[18px] text-outline">drag_indicator</span>
+<span>Hold &amp; drag to reorder client lookbook</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 rounded-full bg-surface-container-low text-primary font-label-sm text-label-sm font-semibold hover:bg-surface-container-high transition-colors">
+          Batch Select
+        </button>
+</div>
+</div>
+</div>
+<!-- 4. Uploaded Lookbook Items (Editable Cards) -->
+<div class="flex flex-col space-y-space-md">
+<!-- Card 1: Radiant Bridal Crown (VIP Hero) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_4px_20px_rgba(74,36,55,0.05)] flex flex-col space-y-space-sm">
+<div class="flex gap-space-sm">
+<!-- Vanity Arch Media Cutout -->
+<div class="relative w-24 h-32 rounded-t-full rounded-b-xl overflow-hidden flex-shrink-0 shadow-sm bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Editorial portrait of a stunning bride wearing a sparkling delicate crystal crown, luminous soft-focus glam makeup with rose gold shimmers on the lids and glossy lip, dramatic natural morning lighting highlighting radiant dewy skin, blush pink tones, high fashion luxury bridal editorial photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaH2WaXP1NlBtpgwjux91rdNnfCNXWA-rWgUaQtNbeb2PsOb85Rqlhybg0-xmyuRZJDM40sA9CbJd7DMFRu0bWivGGowxeKtKg1I7zt1kNcsz_RGdbg4cHthZSKG6mGiNFjhN8ZDwqV7RVaLwkjt9EMRhTUN6UtI8cAguYlJHnKFZyowzg7pPWU-OLNgaO6aS_PGds3JgNcEU4Shl-qcNti6NLWzpH1AYbQ5RvuMHHfyQ3xmPt8JH7Aw"/>
+<span class="absolute top-1.5 left-1.5 w-6 h-6 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant text-[14px]">
+            ⠿
+          </span>
+<div class="absolute bottom-1 right-1 px-1.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[9px] font-bold shadow-sm">
+            HERO
+          </div>
+</div>
+<!-- Meta and Admin Toggles -->
+<div class="flex flex-col justify-between flex-1 min-w-0">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[10px] font-semibold">
+<span class="text-tertiary text-[9px]">✦</span> Bridal Glow
+              </span>
+<!-- Custom Toggle Pill -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate">Radiant Bridal Crown</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Client: Amara J. • Lagos Deluxe</p>
+</div>
+<div class="flex items-center gap-3 pt-1">
+<div class="flex items-center gap-1 text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span>342 Client Loves</span>
+</div>
+<span class="text-outline-variant text-[10px]">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Live</span>
+</div>
+</div>
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex items-center justify-between pt-1 gap-2 border-t-0">
+<button class="flex-1 py-1.5 px-3 rounded-full bg-surface-container-low text-primary font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+<span>Edit Details</span>
+</button>
+<button class="flex-1 py-1.5 px-3 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1 hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">swap_horiz</span>
+<span>Replace</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container-low text-on-surface-variant flex items-center justify-center hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Card 2: Golden Hour Birthday Glow -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_4px_20px_rgba(74,36,55,0.05)] flex flex-col space-y-space-sm">
+<div class="flex gap-space-sm">
+<div class="relative w-24 h-32 rounded-t-full rounded-b-xl overflow-hidden flex-shrink-0 shadow-sm bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Flawless high-fashion portrait of a young woman with radiant bronze makeup, dewy sunlit highlighted cheekbones, precision feline eyeliner, glossy caramel nude lips, dressed for a glamorous evening party, warm golden sunset backdrop with subtle ambient light flare" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPBr3rPbl58UT1qcQDJL3IHbcp8bqEG4dVjJPxsRyadDs6etjnEGX21uMZffn2qXd7LdKtGGt3AI5KVlrzO59Z0nZ0nQNv5BgakoJM9NEX5LB2FirZ8NQJUezKw2K_oAqNmjDMB2ueaLw9EHwvfVV7aiM-wWZzALSr2VYQhiyVZwU3dvMJ-EXNn7uZid9i07WDrm7dsM6EORg0Z_UB3kMBeHCwsqadxDbsJG4t_fY4uEADX-Ygmuf3wQ"/>
+<span class="absolute top-1.5 left-1.5 w-6 h-6 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant text-[14px]">
+            ⠿
+          </span>
+</div>
+<div class="flex flex-col justify-between flex-1 min-w-0">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[10px] font-semibold">
+                Birthday Shoots
+              </span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate">Golden Hour Birthday Glow</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Client: Folake A. • Dewy shimmer skin</p>
+</div>
+<div class="flex items-center gap-3 pt-1">
+<div class="flex items-center gap-1 text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span>289 Client Loves</span>
+</div>
+<span class="text-outline-variant text-[10px]">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Live</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 gap-2">
+<button class="flex-1 py-1.5 px-3 rounded-full bg-surface-container-low text-primary font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+<span>Edit Details</span>
+</button>
+<button class="flex-1 py-1.5 px-3 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1 hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">label</span>
+<span>Manage Tags</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container-low text-on-surface-variant flex items-center justify-center hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Card 3: Wedding Majesty — Coral Regal -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_4px_20px_rgba(74,36,55,0.05)] flex flex-col space-y-space-sm">
+<div class="flex gap-space-sm">
+<div class="relative w-24 h-32 rounded-t-full rounded-b-xl overflow-hidden flex-shrink-0 shadow-sm bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Traditional luxury African bridal glam with elaborate Edo coral bead crown and heavy beaded neckpieces, impecable velvet matte complexion, sculpted warm contours, rich crimson-berry ombre lips, dramatic and regal studio lighting with royal atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDazNwf6V5kndqbgZoPAksbo0vTa1OuxvgufRgA3uuRvJRberfRP71DHB8r75S9mbwBlmO-lW9P_kt5xQjCBizG-I4gHNPbsaSwHjnxhHwkkm16UyFfLCiFFFFLGhD7XoK8sK9wcGj4NXuAXkJCwpjQG3rJWG5CdBW610jL9tkcG7LQCgoasyl-awyLp29A3tPJqJ4swOI0zZIZg8tLkB2zEecUW33SjA4_l4zHNGvCrHbD58cswe_4ZQ"/>
+<span class="absolute top-1.5 left-1.5 w-6 h-6 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant text-[14px]">
+            ⠿
+          </span>
+</div>
+<div class="flex flex-col justify-between flex-1 min-w-0">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[10px] font-semibold">
+                Traditional Bridal
+              </span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate">Wedding Majesty — Coral Regal</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Edo / Yoruba regal beaded crown</p>
+</div>
+<div class="flex items-center gap-3 pt-1">
+<div class="flex items-center gap-1 text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span>412 Client Loves</span>
+</div>
+<span class="text-outline-variant text-[10px]">•</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">★ Featured</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 gap-2">
+<button class="flex-1 py-1.5 px-3 rounded-full bg-surface-container-low text-primary font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+<span>Edit Details</span>
+</button>
+<button class="flex-1 py-1.5 px-3 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1 hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">star</span>
+<span>Featured</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container-low text-on-surface-variant flex items-center justify-center hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Card 4: Smoked Velvet & Satin Nude -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_4px_20px_rgba(74,36,55,0.05)] flex flex-col space-y-space-sm">
+<div class="flex gap-space-sm">
+<div class="relative w-24 h-32 rounded-t-full rounded-b-xl overflow-hidden flex-shrink-0 shadow-sm bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Editorial beauty close-up featuring soft smoked out kohl eyeshadow, ultra fluffy natural mink lashes, satin nude lips with dark chestnut liner, velvet smooth soft-focus skin with subtle peachy blush, modern high fashion editorial studio aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCheaXIC4BWpTJ0ef6snvmuoJbbR8t5XJsMGOI4Jz3e01dY60P2og0dXJ03muNm1CXm0zXUSmZyi_KaH9v6rAa_Nf_ahGgBTGhoXm5clLb2ij-4X8HjF6i2HIsy38U5zzKiEPWX_nXbmQEaoJQNTgOZa-dKxR8DLSHEGXG5S3RSxd3NMPm1bNXzpSmjBLFLIn_qKtQHJSZDGQp5W7KVTaWggya6HNhfPY7XPSAi2ifIQHR5JmQSEi-LLw"/>
+<span class="absolute top-1.5 left-1.5 w-6 h-6 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant text-[14px]">
+            ⠿
+          </span>
+</div>
+<div class="flex flex-col justify-between flex-1 min-w-0">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-[10px] font-semibold">
+                Red Carpet &amp; Evening
+              </span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate">Smoked Velvet &amp; Satin Nude</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Anti-flashback matte finish</p>
+</div>
+<div class="flex items-center gap-3 pt-1">
+<div class="flex items-center gap-1 text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span>508 Client Loves</span>
+</div>
+<span class="text-outline-variant text-[10px]">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Live</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 gap-2">
+<button class="flex-1 py-1.5 px-3 rounded-full bg-surface-container-low text-primary font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+<span>Edit Details</span>
+</button>
+<button class="flex-1 py-1.5 px-3 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1 hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">share</span>
+<span>Social Link</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container-low text-on-surface-variant flex items-center justify-center hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Card 5: Grooms Crisp Skin Prep (Draft State) -->
+<div class="bg-surface-container-low/70 rounded-xl p-space-md shadow-sm flex flex-col space-y-space-sm opacity-90">
+<div class="flex gap-space-sm">
+<div class="relative w-24 h-32 rounded-t-full rounded-b-xl overflow-hidden flex-shrink-0 shadow-sm bg-surface-container">
+<img class="w-full h-full object-cover filter grayscale-[25%]" data-alt="Editorial men's groom skin prep session, refined clean hydrated masculine skin, sharp sculpted beard lines, natural invisible coverage, soft bright daylight window illumination, minimalist luxury studio aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSCtEMENPH04Y1Y2vfMxSsqTVhIk5ecVNfxVhbiSqxDT4mUlo__qeT0sddRM4PCCshsuLnQ9QZYfiGxzc-uiDmJNIl47VK0srp9W-VwSBzY6zjO6DmLm088iBYdg97xwmyiRNMQyjFoTRmRW9hzks8Vq977qeuxmlYxpdgMmzSfNxSzWgeCRksZ_41pPuBDnBzV23rqNOqS7_HjLnIHc_eIQ9sEK8ddSmVP-tO1KTOMbBnjPHfR1DuZg"/>
+<div class="absolute inset-0 bg-inverse-surface/10"></div>
+<span class="absolute top-1.5 left-1.5 w-6 h-6 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant text-[14px]">
+            ⠿
+          </span>
+</div>
+<div class="flex flex-col justify-between flex-1 min-w-0">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-variant text-on-surface-variant font-label-sm text-[10px] font-semibold">
+                Editorial / Groom
+              </span>
+<!-- Toggle Off -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate">Groom Crisp Skin Prep</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Pending client release form consent</p>
+</div>
+<div class="pt-1">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-[10px] font-semibold">
+<span class="material-symbols-outlined text-[12px]">visibility_off</span>
+              Hidden Draft (Unpublished)
+            </span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 gap-2">
+<button class="flex-1 py-1.5 px-3 rounded-full bg-surface-container-lowest text-primary font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+<span>Add Consent &amp; Publish</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container-lowest text-on-surface-variant flex items-center justify-center hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 5. Client-Side Live Sync Callout Banner -->
+<div class="bg-gradient-to-br from-surface-container to-surface-container-low rounded-xl p-space-md shadow-sm flex items-start gap-space-sm mt-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center flex-shrink-0 shadow-[0_4px_12px_rgba(209,60,133,0.25)]">
+<span class="material-symbols-outlined text-[20px]">sync</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Instant Gallery Publishing</h4>
+<span class="text-tertiary text-[12px]">✦</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+        Photos uploaded here instantly render in the client lookbook. Toggling visibility hides looks without deleting stored high-res originals.
+      </p>
+</div>
+</div>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-4px_20px_rgba(74,36,55,0.06)]" data-active-classes="text-primary font-semibold"><div class="h-20 px-gutter flex items-center justify-around"><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="appointments" href="#"><span class="material-symbols-outlined text-[22px]">calendar_today</span><span class="font-label-sm text-label-sm tracking-wide mt-0.5">Appts</span><span class="absolute top-0 right-1.5 px-1 min-w-[15px] h-[15px] flex items-center justify-center rounded-full bg-primary text-on-primary font-label-sm text-[9px] font-bold shadow-[0_0_6px_rgba(173,27,105,0.4)]">2</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="portfolio" href="#"><span class="material-symbols-outlined text-[22px]">photo_library</span><span class="font-label-sm text-label-sm tracking-wide mt-0.5">Portfolio</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="services" href="#"><span class="material-symbols-outlined text-[22px]">spa</span><span class="font-label-sm text-label-sm tracking-wide mt-0.5">Services</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="messages" href="#"><span class="material-symbols-outlined text-[22px]">forum</span><span class="font-label-sm text-label-sm tracking-wide mt-0.5">Messages</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[22px]">tune</span><span class="font-label-sm text-label-sm tracking-wide mt-0.5">Settings</span></a></div></nav></body></html>

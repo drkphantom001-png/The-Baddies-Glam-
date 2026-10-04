@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;min-height:100%;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-secondary": "#ffffff", "primary-container": "#cd3982", "on-tertiary": "#ffffff", "secondary-container": "#ff78b5", "surface-container-high": "#ffe0eb", "inverse-primary": "#ffb0cd", "outline": "#8a7078", "surface-container-low": "#fff0f4", "secondary-fixed": "#ffd9e5", "error-container": "#ffdad6", "on-primary-container": "#fffbff", "surface-variant": "#ffd8e7", "tertiary-container": "#9b6c00", "on-error-container": "#93000a", "on-tertiary-fixed": "#281900", "secondary": "#a6306c", "surface-dim": "#ffcce1", "outline-variant": "#ddbfc8", "inverse-surface": "#4a2437", "inverse-on-surface": "#ffecf2", "surface-container": "#ffe8ef", "primary": "#ad1b69", "on-tertiary-container": "#fffbff", "surface-container-highest": "#ffd8e7", "on-surface": "#310f22", "on-primary-fixed-variant": "#8d0052", "on-error": "#ffffff", "on-surface-variant": "#574148", "tertiary-fixed": "#ffdeac", "on-background": "#310f22", "primary-fixed": "#ffd9e4", "on-secondary-fixed-variant": "#871353", "error": "#ba1a1a", "on-primary": "#ffffff", "surface-bright": "#fff8f8", "secondary-fixed-dim": "#ffb0ce", "on-tertiary-fixed-variant": "#5f4100", "surface-container-lowest": "#ffffff", "on-secondary-fixed": "#3e0022", "background": "#fff8f8", "tertiary-fixed-dim": "#f9bc50", "primary-fixed-dim": "#ffb0cd", "tertiary": "#7b5500", "on-secondary-container": "#770148", "on-primary-fixed": "#3e0021", "surface-tint": "#b01f6b", "surface": "#fff8f8" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "space-xl": "2.25rem", "space-2xl": "3rem", "gutter-tablet": "1.5rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "gutter": "1rem", "margin": "1.25rem", "space-sm": "0.5rem", "space-md": "1rem", "margin-tablet": "2rem" }, fontFamily: { "headline-md": ["EB Garamond"], "label-md": ["Outfit"], "body-sm": ["Outfit"], "headline-sm": ["EB Garamond"], "body-lg": ["Outfit"], "label-sm": ["Outfit"], "headline-lg-mobile": ["EB Garamond"], "display-lg": ["EB Garamond"], "body-md": ["Outfit"], "display-lg-mobile": ["EB Garamond"], "label-lg": ["Outfit"], "headline-lg": ["EB Garamond"] }, fontSize: { "headline-md": ["1.5rem", { "lineHeight": "1.75rem", "fontWeight": "500" }], "label-md": ["0.75rem", { "lineHeight": "0.875rem", "letterSpacing": "0.06em", "fontWeight": "500" }], "body-sm": ["0.8125rem", { "lineHeight": "1.25rem", "fontWeight": "400" }], "headline-sm": ["1.25rem", { "lineHeight": "1.5rem", "fontWeight": "600" }], "body-lg": ["1.0625rem", { "lineHeight": "1.625rem", "fontWeight": "300" }], "label-sm": ["0.6875rem", { "lineHeight": "0.75rem", "letterSpacing": "0.05em", "fontWeight": "600" }], "headline-lg-mobile": ["1.875rem", { "lineHeight": "2.125rem", "fontWeight": "400" }], "display-lg": ["3.25rem", { "lineHeight": "3.5rem", "letterSpacing": "-0.02em", "fontWeight": "400" }], "body-md": ["0.9375rem", { "lineHeight": "1.5rem", "fontWeight": "300" }], "display-lg-mobile": ["2.5rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.01em", "fontWeight": "400" }], "label-lg": ["0.875rem", { "lineHeight": "1rem", "letterSpacing": "0.08em", "fontWeight": "500" }], "headline-lg": ["2.25rem", { "lineHeight": "2.5rem", "fontWeight": "400" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <!-- Firebase -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
+  import { getAnalytics, isSupported } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-analytics.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCThamH38Ivr4Lvp8oM1KMnBK3hckt6uCg",
+    authDomain: "the-baddies-glam.firebaseapp.com",
+    databaseURL: "https://the-baddies-glam-default-rtdb.firebaseio.com",
+    projectId: "the-baddies-glam",
+    storageBucket: "the-baddies-glam.firebasestorage.app",
+    messagingSenderId: "50349208028",
+    appId: "1:50349208028:web:8eae36e1f142912ebc5f19",
+    measurementId: "G-EJFRE46N73"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  window.firebaseApp = app;
+
+  // Analytics only works on http(s) pages in supported browsers
+  isSupported().then((ok) => { if (ok) window.firebaseAnalytics = getAnalytics(app); }).catch(() => {});
+</script>
+</head><body class="bg-surface text-on-surface flex flex-col min-h-screen selection:bg-secondary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_12px_rgba(74,36,55,0.06)]"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm min-w-0"><img alt="Brand logo. - Primary color: #d13c85
+- Font: ebGaramond
+- Mode: light
+- Roundness: rounded-full
+" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1V4bizUExCofWj8R8Oz0xr9o_Xo2UihNpMz-SrJq7o_-bXJ8pH6Bbc0JUU2YOFp6PXw96j1d7qmnfXY2Yfk7_d-z5HUuzKn38Q_K15MXhHAwVPk_vQKJlfuGzFGKxLJjY7yxktf7FcbPifV--4iwaal2mgYyEgp9yHoR0Nxjb0k1LDRIX8KdP9tptkzMHrFaWYiw5HuQv6FxUOACBKMORCYr-w2GAjCKre1W9GAt1e0s8cvXRVRIFK-wp0"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-1.5"><span class="font-headline-sm text-headline-sm text-on-surface truncate leading-none">Studio Admin</span><span class="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm uppercase tracking-wider font-semibold shadow-[0_0_8px_rgba(249,188,80,0.4)]"><span class="text-[10px] leading-none text-tertiary">✦</span>OWNER</span></div><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Appointments</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[24px]">notifications</span><span class="absolute top-1.5 right-1.5 flex h-4 min-w-[1rem] px-1 items-center justify-center rounded-full bg-primary text-on-primary font-label-sm text-[10px] font-bold shadow-[0_0_8px_rgba(205,57,130,0.5)] animate-pulse">3</span></button><button aria-label="Owner Profile" class="w-11 h-11 flex items-center justify-center"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-28 bg-surface"><div class="flex flex-col w-full">
+<!-- Lekki Studio Subtle Ambient Banner -->
+<div class="px-margin pt-4 pb-2 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Lekki Phase 1 Studio • Live Queue</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span>Auto-Backfill ON</span>
+</div>
+</div>
+<!-- Screen Title & Time Horizon -->
+<div class="px-margin mt-1">
+<div class="flex items-baseline justify-between">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">Cancellations &amp; Shifts</h1>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-0.5">✦ AUDIT PULSE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Deposit integrity, slot redeployments, and waitlist fulfillment.</p>
+</div>
+<!-- Time Horizon Tabs -->
+<div class="px-margin mt-3">
+<div class="flex items-center p-1 bg-surface-container-low rounded-full shadow-inner">
+<button class="flex-1 py-1.5 rounded-full text-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" type="button">Today</button>
+<button class="flex-1 py-1.5 rounded-full text-center font-label-md text-label-md bg-primary text-on-primary shadow-sm font-semibold transition-all" type="button">This Week</button>
+<button class="flex-1 py-1.5 rounded-full text-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" type="button">This Month</button>
+</div>
+</div>
+<!-- Studio Quick KPI Metrics Carousel (Protected Value) -->
+<div class="mt-4 px-margin">
+<div class="grid grid-cols-3 gap-2">
+<!-- KPI 1 -->
+<div class="bg-surface-container-low rounded-lg p-3 flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="w-6 h-6 rounded-full bg-secondary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[14px]">event_repeat</span>
+</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">8 Slots</span>
+</div>
+<div class="mt-2">
+<div class="font-label-sm text-[10px] uppercase text-on-surface-variant leading-tight">Retained</div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-0.5 leading-none">₦120k</div>
+<div class="font-label-sm text-[9px] text-primary mt-1 truncate">100% Deposits saved</div>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-low rounded-lg p-3 flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="w-6 h-6 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[14px]">flash_on</span>
+</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">4 Filled</span>
+</div>
+<div class="mt-2">
+<div class="font-label-sm text-[10px] uppercase text-on-surface-variant leading-tight">Waitlist Sync</div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-0.5 leading-none">&lt; 8m</div>
+<div class="font-label-sm text-[9px] text-tertiary mt-1 truncate">Avg backfill speed</div>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container-low rounded-lg p-3 flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[14px]">verified_user</span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Policy</span>
+</div>
+<div class="mt-2">
+<div class="font-label-sm text-[10px] uppercase text-on-surface-variant leading-tight">Studio Credit</div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-0.5 leading-none">₦30k</div>
+<div class="font-label-sm text-[9px] text-on-surface-variant mt-1 truncate">Late fee reserve</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Filter Chips with Counter Badges -->
+<div class="mt-4 px-margin flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md font-medium shadow-sm flex-shrink-0">
+<span>All Activity</span>
+<span class="w-4 h-4 rounded-full bg-surface-container-lowest text-primary text-[10px] font-bold flex items-center justify-center">14</span>
+</button>
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors flex-shrink-0">
+<span>Rescheduled</span>
+<span class="w-4 h-4 rounded-full bg-surface-container-high text-on-surface text-[10px] font-medium flex items-center justify-center">8</span>
+</button>
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors flex-shrink-0">
+<span>Cancelled</span>
+<span class="w-4 h-4 rounded-full bg-surface-container-high text-on-surface text-[10px] font-medium flex items-center justify-center">4</span>
+</button>
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors flex-shrink-0">
+<span>Waitlist Released</span>
+<span class="w-4 h-4 rounded-full bg-surface-container-high text-on-surface text-[10px] font-medium flex items-center justify-center">2</span>
+</button>
+</div>
+<!-- Live Modification Feed Section -->
+<div class="mt-5 px-margin flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Audit Stream</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">sync</span>
+        Live Polling
+      </span>
+</div>
+<!-- CARD 1: Rescheduled & Retained (VIP Bridal Glam) -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm relative overflow-hidden flex flex-col gap-3">
+<!-- Glow accent top strip -->
+<div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-secondary-container via-primary to-secondary"></div>
+<!-- Header Row -->
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img class="w-12 h-14 rounded-lg object-cover shadow-sm" data-alt="Close up editorial beauty portrait of an elegant African bride with radiant dew finish, sculpted eyebrows, and glowing rose lip gloss in a luxury studio setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmL0I4QhOOi1Yis3a0OyEvEfOUR1fXmM9Ju3tXUCqMqEbCfpaILjM8oBesVvpVvTyff0IXt-pLWB1wTPzlQ4NsysnbYWygq3TgKB2TFujt59fi_GJSTCJk1tpFuyi7vRf2c0zmuISoYEMJSKutrhZVqhVMGIgklm5fiKtWt6s3gCVwplyxNd9JA-RNrrtqWPer8n_1hVkZT0MAc2Mv9q9Kt_KO5HeB4BRCRuC2TYj6u_0tJWo0Vk2F_g"/>
+<span class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-primary text-on-primary flex items-center justify-center text-[10px]">✦</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface">Somtochukwu A.</span>
+<span class="px-1.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-[10px] font-bold">VIP BRIDE</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span>Bespoke Bridal Glam</span>
+<span>•</span>
+<span class="font-label-sm text-label-sm text-primary font-medium tracking-wide">#BG-8921</span>
+</div>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-[11px] font-semibold">
+<span class="material-symbols-outlined text-[13px]">published_with_changes</span>
+          Shifted
+        </span>
+</div>
+<!-- Schedule Change Block -->
+<div class="bg-surface-container-low rounded-lg p-3 flex flex-col gap-2">
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5 line-through opacity-70">
+<span class="material-symbols-outlined text-[16px]">event</span>
+<span>Sat Nov 16, 9:00 AM</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-primary">arrow_forward</span>
+<div class="flex items-center gap-1.5 font-medium text-primary">
+<span class="material-symbols-outlined text-[16px]">event_available</span>
+<span>Sun Nov 17, 2:00 PM</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 font-label-sm text-label-sm">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">face</span>
+            Stylist: <strong class="text-on-surface font-semibold">Director Bukky</strong>
+</span>
+<span class="text-tertiary flex items-center gap-1 font-semibold">
+<span>✦</span> Retained Same Lead
+          </span>
+</div>
+</div>
+<!-- Financial & Operations Micro Status -->
+<div class="grid grid-cols-2 gap-2 text-on-surface">
+<div class="bg-surface-container rounded-md p-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">account_balance_wallet</span>
+<div class="min-w-0">
+<div class="font-label-sm text-[10px] text-on-surface-variant uppercase">Deposit Status</div>
+<div class="font-label-md text-label-md font-bold truncate">₦15,000 Rolled 100%</div>
+</div>
+</div>
+<div class="bg-surface-container rounded-md p-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">notifications_active</span>
+<div class="min-w-0">
+<div class="font-label-sm text-[10px] text-on-surface-variant uppercase">Client Sync</div>
+<div class="font-label-md text-label-md font-bold truncate text-secondary">WhatsApp &amp; In-App ✓</div>
+</div>
+</div>
+</div>
+<!-- Automated Waitlist Dispatch Alert -->
+<div class="rounded-md bg-secondary-fixed/50 p-2.5 flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">swap_calls</span>
+<div class="flex-1 font-body-sm text-body-sm leading-tight text-on-surface">
+<strong class="font-semibold text-primary">Released Slot Action:</strong> Original Sat 9:00 AM slot auto-offered to Queue Waitlist bride <span class="font-medium">Kemi O.</span> (Offer valid 45 mins).
+        </div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 py-2.5 px-3 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-medium text-center transition-colors">
+          View Booking #8921
+        </button>
+<button class="py-2.5 px-4 rounded-full bg-primary text-on-primary font-label-md text-label-md font-medium flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>Contact</span>
+</button>
+</div>
+</div>
+<!-- CARD 2: Cancelled • Slot Released & Backfilled -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm relative overflow-hidden flex flex-col gap-3">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img class="w-12 h-14 rounded-lg object-cover shadow-sm" data-alt="Chic African woman with soft bronze editorial glam, clean eyeliner, and glossy lip posing in an ambient soft-lit luxury beauty vanity studio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnRfFwQQir7kkPqksGzfAyfuMju05F_L977AAdIZJYL8Zx-X5nku6L52scqnjT1JMFsLUJ3WHok0m8pttCb90kGODSOgosWKFJzmt3-03YTiiSoNQDwY-9_naYYCvN8kVu8bU3GgtuKSJt3UDIMKldWC3aiYlQamaa_xsnee29A5toQjDObw7xXvFPADQkS0r3fGrzf87ie4i2O5uc_FgpBkXPbFGcTY9Qi1SmJc85rHdmIBwRGku1rQ"/>
+<span class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center text-[10px]">
+<span class="material-symbols-outlined text-[10px]">schedule</span>
+</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface">Fatima D.</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-[10px] font-medium">REGULAR</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span>Signature Soft Glam</span>
+<span>•</span>
+<span class="font-label-sm text-label-sm text-primary font-medium tracking-wide">#BG-8840</span>
+</div>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-tertiary font-label-sm text-[11px] font-semibold">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+          Backfilled
+        </span>
+</div>
+<!-- Cancellation Details -->
+<div class="bg-surface-container-low rounded-lg p-3 flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-on-surface flex items-center gap-1.5 font-medium">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">calendar_today</span>
+            Cancelled: Fri Nov 15, 3:30 PM
+          </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Senior Pro Chioma</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">flight_takeoff</span>
+<span>Reason: Travel itinerary delay (Notified 36 hrs prior)</span>
+</div>
+</div>
+<!-- Success Recovery Banner -->
+<div class="rounded-lg bg-surface-container-high/60 p-3 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface uppercase tracking-wide">Fulfillment Win</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">⚡ Backfilled in 6m 12s</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface">
+          Claimed by waitlist queue #3: <strong class="font-semibold text-primary">Adaeze U.</strong> (Deposit ₦10,000 cleared via Paystack).
+        </div>
+<div class="flex items-center gap-2 pt-1 font-label-sm text-[11px] text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-primary">redeem</span>
+<span>Fatima received ₦10,000 Studio Credit Voucher (Valid 90 days)</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 py-2.5 px-3 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-medium text-center transition-colors">
+          View Voucher #V-901
+        </button>
+<button class="flex-1 py-2.5 px-3 rounded-full bg-surface-container-low hover:bg-surface-container text-primary font-label-md text-label-md font-semibold text-center transition-colors">
+          View Replacement
+        </button>
+</div>
+</div>
+<!-- CARD 3: Late Cancellation • Deposit Policy Applied -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm relative overflow-hidden flex flex-col gap-3">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img class="w-12 h-14 rounded-lg object-cover shadow-sm" data-alt="High-fashion makeup portrait of an African muse with artistic smoked wings, velvety warm skin, and metallic glossy lip highlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNLwcsJNKLKQE8WF2KTCo_Gmz100qSjc4Z9hcmk-3yUzFBWcsnxVXRHWMPXQkyoIOTx6tUsTku9AnfkjjnVdN6ZjYPFO4EQOo-Oeh67K8Ik2wBIeL-IEVNYWyKG82yNVj0eIsJXCSzyAbtcqgOx8sgFCh8ItF20tf26VcYoH1t4kEb84U0Ew4sIUdYPwhLjTLVuizgPwvWn0XRrvNkY1-dOHUlR1TmXxzBcoiQN-vJj0oZc2XGEqO59Q"/>
+<span class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-error text-on-error flex items-center justify-center text-[10px]">!</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface">Zainab B.</span>
+<span class="px-1.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-[10px] font-bold">LATE CANCEL</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span>Editorial Glam Session</span>
+<span>•</span>
+<span class="font-label-sm text-label-sm text-primary font-medium tracking-wide">#BG-8799</span>
+</div>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-[11px] font-bold">
+          Policy Fee
+        </span>
+</div>
+<!-- Schedule Warning Notice -->
+<div class="bg-surface-container-low rounded-lg p-3 flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-on-surface flex items-center gap-1.5 font-medium">
+<span class="material-symbols-outlined text-[16px] text-error">warning</span>
+            Original: Today, 11:00 AM
+          </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Artist Tolu</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Cancelled with <strong>3h 15m notice</strong> (Lekki Studio policy requires minimum 24h for full voucher rollover).
+        </p>
+</div>
+<!-- Fee Breakdown -->
+<div class="rounded-lg bg-surface-container-high/40 p-3 flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="text-on-surface-variant">Late Cancellation Fee Retained</span>
+<span class="text-error font-bold font-headline-sm text-headline-sm">₦5,000</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Remaining Balance Rolled as Studio Credit</span>
+<span class="font-medium text-on-surface">₦5,000</span>
+</div>
+<div class="pt-1 flex items-center gap-1 font-label-sm text-[11px] text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">send</span>
+<span>WhatsApp &amp; SMS policy breakdown auto-sent to client.</span>
+</div>
+</div>
+<!-- Policy Override Action -->
+<div class="pt-1 flex items-center justify-between gap-3">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-[11px]">
+<span class="material-symbols-outlined text-[16px] text-tertiary">lock</span>
+<span>Director Pin Required</span>
+</div>
+<button class="py-2 px-4 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-md text-label-md font-semibold transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Override Policy Fee</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Studio Operations Quick Actions Toolbar -->
+<div class="mt-6 px-margin">
+<div class="bg-surface-container-low rounded-xl p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Fast Desk Controls</span>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Lekki Admin</span>
+</div>
+<!-- Action 1: Broadcast to Waitlist -->
+<button class="w-full py-3 px-4 rounded-full bg-gradient-to-r from-secondary to-primary text-on-primary font-label-lg text-label-lg font-medium flex items-center justify-between shadow-md active:scale-[0.98] transition-transform">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">campaign</span>
+<span>Broadcast Open Slots to Waitlist</span>
+</span>
+<span class="w-6 h-6 rounded-full bg-surface-container-lowest/20 flex items-center justify-center font-label-sm text-label-sm">✦</span>
+</button>
+<!-- Action 2 & 3 Secondary grid -->
+<div class="grid grid-cols-2 gap-2 mt-0.5">
+<button class="py-2.5 px-3 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-medium flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px] text-primary">timer</span>
+<span class="truncate">Policy: 24h Window</span>
+</button>
+<button class="py-2.5 px-3 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-medium flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px] text-primary">download</span>
+<span class="truncate">Export Log (CSV)</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bottom Spacing Cushion for shell dock clearance -->
+<div class="h-6"></div>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-4px_20px_rgba(74,36,55,0.06)]" data-active-classes="text-primary font-semibold"><div class="h-20 px-gutter flex items-center justify-around"><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="appointments" href="#"><span class="material-symbols-outlined text-[22px]">calendar_today</span><span class="font-label-sm text-label-sm tracking-wide mt-0.5">Appts</span><span class="absolute top-0 right-1.5 px-1 min-w-[15px] h-[15px] flex items-center justify-center rounded-full bg-primary text-on-primary font-label-sm text-[9px] font-bold shadow-[0_0_6px_rgba(173,27,105,0.4)]">2</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="portfolio" href="#"><span class="material-symbols-outlined text-[22px]">photo_library</span><span class="font-label-sm text-label-sm tracking-wide mt-0.5">Portfolio</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="services" href="#"><span class="material-symbols-outlined text-[22px]">spa</span><span class="font-label-sm text-label-sm tracking-wide mt-0.5">Services</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="messages" href="#"><span class="material-symbols-outlined text-[22px]">forum</span><span class="font-label-sm text-label-sm tracking-wide mt-0.5">Messages</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[22px]">tune</span><span class="font-label-sm text-label-sm tracking-wide mt-0.5">Settings</span></a></div></nav></body></html>
